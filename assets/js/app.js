@@ -82,7 +82,7 @@ function combo(input, list, search, pick, wait = 250) {
 async function placeSearch(q) {
   if (q.length < 2) return [];
   try {
-    const d = await getJSON(`https://photon.komoot.io/api/?q=${encodeURIComponent(q)}&limit=10&lang=en&bbox=68,6,97.5,37.2&layer=city&layer=locality&layer=district&layer=county&layer=state&layer=other`, 8000);
+    const d = await getJSON(`https://photon.komoot.io/api/?q=${encodeURIComponent(q)}&limit=10&lang=en&bbox=68,6,97.5,37.2&layer=city&layer=locality&layer=district&layer=county&layer=state`, 8000);
     const seen = new Set();
     return d.features.filter(f => { const p = f.properties, k = p.name + "|" + (p.state || "");
       if (p.countrycode !== "IN" || seen.has(k)) return false; seen.add(k); return true; }).slice(0, 7).map(f => {
