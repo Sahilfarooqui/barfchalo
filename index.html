@@ -37,53 +37,59 @@
   <canvas id="snowfx" aria-hidden="true"></canvas>
   <svg class="peaks" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true"><path d="M0 260 L0 170 L140 90 L230 150 L380 40 L520 160 L640 110 L760 190 L900 70 L1030 150 L1150 100 L1290 180 L1440 120 L1440 260Z" fill="#12213a"/><path d="M380 40 L420 75 L400 72 L380 90 L362 70 L345 78Z M900 70 L940 104 L915 100 L900 116 L884 98 L866 104Z" fill="#e9f3ff" opacity=".9"/><path d="M0 260 L0 210 L200 150 L330 210 L470 140 L610 220 L780 160 L930 220 L1080 170 L1240 230 L1440 180 L1440 260Z" fill="#0b1424"/></svg>
   <div class="hero-in">
-    <p class="kicker">❄ Free snow trip planner for India</p>
-    <h1>Where is it <span class="grad">snowing</span> this week?</h1>
+    <p class="kicker">❄ Free · for anyone in India</p>
+    <h1>Barf kahan <span class="grad">gir rahi hai?</span></h1>
     <p class="tripcount" id="tripCount" hidden></p>
-    <p class="sub">Live snow forecast for 40+ places in Himachal, Uttarakhand, Kashmir &amp; Sikkim — with the real road route, fuel cost for <em>your</em> car, tolls and cost per person.</p>
+    <p class="sub">Live snow forecast + drive cost for your car. 3 steps.</p>
 
     <form class="planner" id="planner" autocomplete="off" onsubmit="return false">
-      <div class="field wide">
-        <label for="from">📍 Starting from</label>
+      <div class="step">
+        <label for="from"><i class="num">1</i> Kahan se? <span class="lt">Starting from</span></label>
         <div class="row">
-          <input id="from" type="text" placeholder="Type your city or area…" aria-autocomplete="list" aria-controls="fromList">
-          <button type="button" class="ghost" id="locBtn" title="Use my location">🎯<span class="hide-s"> My location</span></button>
+          <input id="from" type="text" placeholder="Type your city…" aria-autocomplete="list" aria-controls="fromList" enterkeyhint="search">
+          <button type="button" class="ghost" id="locBtn" title="Use my location" aria-label="Use my location">📍<span class="hide-s"> Near me</span></button>
         </div>
         <ul class="dropdown" id="fromList" role="listbox"></ul>
       </div>
-      <div class="field wide">
-        <label for="car">🚗 Your car</label>
-        <input id="car" type="text" placeholder="Search: Swift, Creta, Thar…" aria-controls="carList">
+      <div class="step">
+        <label for="car"><i class="num">2</i> Aapki car <span class="lt">Your car</span></label>
+        <input id="car" type="text" placeholder="Swift, Creta, XUV700, Thar…" aria-controls="carList">
         <ul class="dropdown" id="carList" role="listbox"></ul>
       </div>
-      <div class="field">
-        <label>👥 People</label>
-        <div class="stepper"><button type="button" data-step="-1" aria-label="fewer">−</button><output id="pax">4</output><button type="button" data-step="1" aria-label="more">+</button></div>
-      </div>
-      <div class="field">
-        <label for="price" id="priceLbl">⛽ Fuel ₹/litre</label>
-        <input id="price" type="number" step="0.1" min="1" inputmode="decimal">
-        <small id="priceNote" class="note">approx · edit</small>
-      </div>
-      <div class="field">
-        <label for="mileage" id="milLbl">📏 Mileage (highway)</label>
-        <input id="mileage" type="number" step="0.1" min="1" inputmode="decimal">
-        <small id="milNote" class="note">approx real-world · edit</small>
-      </div>
-      <button type="button" class="cta" id="goBtn">Find snow trips ❄</button>
+      <details class="more" id="more">
+        <summary><span>⚙️ Edit details</span><small id="moreSum"></small></summary>
+        <div class="more-in">
+          <div class="field">
+            <label>👥 Kitne log? <span class="lt">People</span></label>
+            <div class="stepper"><button type="button" data-step="-1" aria-label="fewer">−</button><output id="pax">4</output><button type="button" data-step="1" aria-label="more">+</button></div>
+          </div>
+          <div class="field">
+            <label for="price" id="priceLbl">⛽ Fuel ₹/litre</label>
+            <input id="price" type="number" step="0.1" min="1" inputmode="decimal">
+            <small id="priceNote" class="note">approx · edit</small>
+          </div>
+          <div class="field">
+            <label for="mileage" id="milLbl">📏 Mileage (highway)</label>
+            <input id="mileage" type="number" step="0.1" min="1" inputmode="decimal">
+            <small id="milNote" class="note">approx real-world · edit</small>
+          </div>
+        </div>
+      </details>
+      <button type="button" class="cta" id="goBtn"><i class="num">3</i> Find snow ❄️</button>
     </form>
   </div>
 </section>
 
 <section class="wrap" id="results">
   <div class="liveline" id="liveline"></div>
+  <h2 class="h2 restitle" id="resTitle">❄️ Snow trips for you</h2>
   <div class="statbar" id="statbar"></div>
   <div class="toolbar">
     <div class="chips" id="stateChips"></div>
     <div class="tools">
       <label class="toggle"><input type="checkbox" id="offbeat"> <span>Offbeat only</span></label>
       <select id="sort" aria-label="Sort">
-        <option value="best">⭐ Best match</option><option value="snow">❄ Most snow</option>
+        <option value="best">⭐ Best for you</option><option value="snow">❄ Most snow</option>
         <option value="near">📍 Nearest</option><option value="cheap">💸 Cheapest</option>
       </select>
     </div>
@@ -123,7 +129,9 @@
     <div><b>❄</b><p><strong>Snow</strong> — live from the free <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> weather model at each place's real height. It is a forecast, not a guarantee.</p></div>
     <div><b>🛣️</b><p><strong>Routes</strong> — real road routes from the public <a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a> router on <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> data.</p></div>
     <div><b>⛰️</b><p><strong>Fuel</strong> — your car's approx real-world mileage, adjusted for climbs and descents using the road's height profile.</p></div>
-    <div><b>🧾</b><p><strong>Tolls &amp; prices</strong> — rough estimates, always marked “approx”. Check your FASTag SMS for the real amount.</p></div>
+    <div><b>🧾</b><p><strong>Tolls</strong> — real toll plazas on your route with NHAI car fares (<a href="https://github.com/ForceGT/india-toll-plazas" target="_blank" rel="noopener">open NHAI data</a>). Fares change every April — check your FASTag SMS.</p></div>
+    <div><b>⛽</b><p><strong>Fuel stops</strong> — petrol/diesel pumps, CNG stations and EV chargers within 1.5 km of your route, from <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>, matched to your car's fuel.</p></div>
+    <div><b>📸</b><p><strong>Explore spots</strong> — viewpoints, waterfalls, lakes and villages from <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> and Wikipedia/Wikidata, photos from Wikimedia Commons with credit.</p></div>
   </div>
 </section>
 
@@ -131,7 +139,7 @@
   <div class="foot-in">
     <div class="brand small"><img src="assets/logo.svg" alt="" width="26" height="26"><span>Barf<b>Chalo</b></span></div>
     <p class="social"><a class="soon" href="stats.html">📊 Live reach</a><a class="soon" href="privacy.html">🔒 Privacy</a><a class="soon" href="https://www.instagram.com/barfchalo/" target="_blank" rel="noopener">📸 Instagram</a><span class="soon">▶️ YouTube — coming soon</span></p>
-    <p class="fine">Free to use. Snow: Open-Meteo (CC BY 4.0). Map data © OpenStreetMap contributors. Routing: OSRM demo server. Photos: Wikimedia Commons, credited on each photo. Mileage, fuel prices and tolls are approximate estimates — not quotes. Always check road status locally before you drive.</p>
+    <p class="fine">Free to use. Snow: Open-Meteo (CC BY 4.0). Map data © OpenStreetMap contributors. Routing: OSRM demo server. Photos: Wikimedia Commons, credited on each photo. Tolls: NHAI toll plaza data (open dataset). Explore spots &amp; fuel stations: OpenStreetMap (ODbL) &amp; Wikidata. Mileage and fuel are estimates — not quotes. Always check road status locally before you drive.</p>
   </div>
 </footer>
 

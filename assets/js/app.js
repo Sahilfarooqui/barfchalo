@@ -72,6 +72,9 @@ function setCar(car, keepMileage) {
   $("#milNote").textContent = `approx real-world: city ${car.city} · hwy ${car.hwy} ${u}`;
   if (!S.priceTouched) setDefaultPrice();
 }
+function updateMoreSum() { const el = $("#moreSum"); if (!el || !S.car) return;
+  const u = S.car.fuel === "cng" ? "km/kg" : S.car.fuel === "ev" ? "km/kWh" : "km/l";
+  el.textContent = `${S.pax} log · ${S.mileage} ${u} · ₹${S.price}/${fuelUnit(S.car.fuel) === "litre" ? "L" : fuelUnit(S.car.fuel)}`; }
 function setDefaultPrice() {
   const f = S.car ? S.car.fuel : "petrol", st = S.from && S.from.state;
   let v, note;
@@ -81,7 +84,7 @@ function setDefaultPrice() {
     const live = S.fuelLive && S.fuelLive.fuel[known ? st : "Delhi"];
     note = live ? `${known ? st : "Delhi"} avg ${f} today · updated ${fmtDate(S.fuelLive.updated)} · edit` : `approx ${known ? st : "Delhi"} ${f} price · edit`; }
   S.price = v; $("#price").value = v; $("#priceNote").textContent = note;
-  $("#priceLbl").textContent = `⛽ ${f === "ev" ? "Power" : "Fuel"} ₹/${fuelUnit(f)}`;
+  $("#priceLbl").textContent = `⛽ ${f === "ev" ? "Power" : "Fuel"} ₹/${fuelUnit(f)}`; updateMoreSum();
 }
 function setFrom(f) {
   S.from = f; $("#from").value = f.name;
@@ -89,17 +92,18 @@ function setFrom(f) {
 }
 function combo(input, list, search, pick, wait = 250) {
   let items = [], act = -1, timer;
-  const render = () => { list.innerHTML = items.map((it, i) => `<li role="option" data-i="${i}" class="${i === act ? "act" : ""}">${it.html}</li>`).join("");
+  const render = () => { list.innerHTML = items.map((it, i) => it.grp ? `<li class="grp" aria-hidden="true">${it.html}</li>` : `<li role="option" data-i="${i}" class="${i === act ? "act" : ""}">${it.html}</li>`).join("");
     list.classList.toggle("open", items.length > 0); };
   input.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(async () => { items = await search(input.value.trim()); act = -1; render(); }, wait); });
   input.addEventListener("focus", async () => { if (!input.dataset.typed) { items = await search(""); act = -1; render(); } });
   input.addEventListener("keydown", e => {
-    if (e.key === "ArrowDown") { act = Math.min(items.length - 1, act + 1); render(); e.preventDefault(); }
-    else if (e.key === "ArrowUp") { act = Math.max(0, act - 1); render(); e.preventDefault(); }
-    else if (e.key === "Enter" && items.length) { pick(items[Math.max(0, act)].v); list.classList.remove("open"); e.preventDefault(); }
+    const nx = (i, st) => { do i += st; while (items[i] && items[i].grp); return items[i] ? i : act; };
+    if (e.key === "ArrowDown") { act = nx(act, 1); render(); e.preventDefault(); }
+    else if (e.key === "ArrowUp") { act = nx(act, -1); render(); e.preventDefault(); }
+    else if (e.key === "Enter" && items.some(x => !x.grp)) { pick(items[act >= 0 ? act : items.findIndex(x => !x.grp)].v); list.classList.remove("open"); e.preventDefault(); }
     else if (e.key === "Escape") list.classList.remove("open");
   });
-  list.addEventListener("mousedown", e => { const li = e.target.closest("li"); if (li) { pick(items[+li.dataset.i].v); list.classList.remove("open"); e.preventDefault(); } });
+  list.addEventListener("mousedown", e => { const li = e.target.closest("li"); if (li && li.dataset.i != null) { pick(items[+li.dataset.i].v); list.classList.remove("open"); e.preventDefault(); } });
   input.addEventListener("blur", () => setTimeout(() => list.classList.remove("open"), 150));
 }
 async function placeSearch(q) {
@@ -115,8 +119,13 @@ async function placeSearch(q) {
     });
   } catch { return []; }
 }
+const POPULAR = ["maruti-swift-petrol","hyundai-creta-petrol","mahindra-xuv700-diesel","mahindra-scorpio-n-diesel","mahindra-thar-diesel","maruti-brezza-petrol","tata-nexon-petrol","toyota-innova-crysta-diesel","maruti-ertiga-cng","maruti-baleno-petrol","toyota-fortuner-diesel","kia-seltos-petrol"];
+function carItem(c) { return { html: `<span><b>${esc(c.model)}</b> <span class="muted">${esc(c.brand)}</span></span><span class="fuel ${c.fuel}">${c.fuel}</span><small>~${c.hwy} ${c.fuel === "cng" ? "km/kg" : c.fuel === "ev" ? "km/kWh" : "km/l"}</small>`, v: c }; }
 function carSearch(q) {
   const t = q.toLowerCase().split(/\s+/).filter(Boolean);
+  if (!t.length) { const pop = POPULAR.map(id => S.cars.find(c => c.id === id)).filter(Boolean);
+    return [{ html: "⭐ Popular", v: null, grp: 1 }, ...pop.map(carItem), { html: "All cars (A–Z)", v: null, grp: 1 },
+      ...[...S.cars].sort((a, b) => (a.brand + a.model).localeCompare(b.brand + b.model)).map(carItem)]; }
   return S.cars.filter(c => t.every(w => `${c.brand} ${c.model} ${c.fuel}`.toLowerCase().includes(w))).slice(0, 40)
     .map(c => ({ html: `<span><b>${esc(c.model)}</b> <span class="muted">${esc(c.brand)}</span></span><span class="fuel ${c.fuel}">${c.fuel}</span><small>~${c.hwy} ${c.fuel === "cng" ? "km/kg" : c.fuel === "ev" ? "km/kWh" : "km/l"}</small>`, v: c }));
 }
@@ -210,11 +219,11 @@ function renderCards() {
     return `<article class="card" data-id="${d.id}" tabindex="0">
       <div class="ph">${photoHTML(d)}<span class="badge ${s.cls}">${s.txt}</span>${d.offbeat ? '<span class="tagoff">Offbeat</span>' : ""}<span class="rank">${i + 1}</span>
         <div class="t"><h3>${esc(d.name)}</h3><p>${esc(d.area)}, ${esc(STATE_SHORT[d.state] || d.state)} · ${d.elevation_m.toLocaleString("en-IN")} m</p></div></div>
-      <div class="facts"><div><b>${r ? Math.round(r.km) + " km" : "—"}</b><span>${r && !r.real ? "approx " : ""}one way</span></div>
-        <div><b>${r ? "~" + Math.round(driveHours(r.h, hillFactor(d) + 0.1)) + " h" : "—"}</b><span>drive</span></div>
-        <div><b>${c ? inr(c.total / S.pax) : "—"}</b><span>≈ per person*</span></div></div>
-      <div class="cardfoot"><span class="risk"><i class="dot r${sf.lvl}"></i>${sf.label}</span>
-        <span>${w ? `${w.now != null ? Math.round(w.now) + "°C now" : ""}` : ""}</span><span class="mini" aria-label="7 day snow">${bars}</span></div>
+      <div class="facts"><div><b>${w ? (w.snow7 >= 0.5 ? Math.round(w.snow7) + " cm" : "0 cm") : "—"}</b><span>snow · 7 days</span></div>
+        <div><b>${r ? Math.round(r.km) + " km" : "—"}</b><span>${r && !r.real ? "approx " : ""}~${r ? Math.round(driveHours(r.h, hillFactor(d) + 0.1)) : "?"} h drive</span></div>
+        <div><b>${c ? inr(c.total / S.pax) : "—"}</b><span>per person</span></div></div>
+      <div class="cardfoot"><span class="safe-badge l${sf.lvl}">${["", "✅", "⚠️", "⛔"][sf.lvl]} ${sf.label}</span>
+        <span class="mini" aria-label="7 day snow">${bars}</span><span class="open">Details →</span></div>
     </article>`; }).join("");
 }
 function renderStats() {
@@ -223,9 +232,7 @@ function renderStats() {
   const top = [...S.dests].sort((a, b) => (S.wx[b.id]?.snow7 || 0) - (S.wx[a.id]?.snow7 || 0))[0];
   const near = S.from ? [...S.dests].filter(d => (S.wx[d.id]?.snow7 || 0) >= 0.5).sort((a, b) => (S.road[a.id]?.km || 1e9) - (S.road[b.id]?.km || 1e9))[0] : null;
   $("#statbar").innerHTML = S.wxFail ? `<div class="stat"><b>⚠️</b><span>Snow forecast didn't load — refresh in a minute.</span></div>` : `
-    <div class="stat"><b>${some}/${S.dests.length}</b><span>places with snow forecast this week</span></div>
-    <div class="stat"><b>${heavy}</b><span>with heavy snow (15 cm+)</span></div>
-    <div class="stat"><b>${top && S.wx[top.id] ? esc(top.name) : "—"}</b><span>most snow: ${top && S.wx[top.id] ? Math.round(S.wx[top.id].snow7) + " cm in 7 days" : ""}</span></div>
+    <div class="stat"><b>${some}/${S.dests.length}</b><span>places with snow this week${heavy ? ` · ${heavy} heavy` : ""}</span></div>
     <div class="stat"><b>${near ? esc(near.name) : "—"}</b><span>${near ? "nearest snow · " + Math.round(S.road[near.id].km) + " km" : "set a start point for distances"}</span></div>`;
 }
 function renderLive() {
@@ -275,7 +282,7 @@ async function routeFor(d) {
   const g = r.routes[0], coords = g.geometry.coordinates, smp = sampleRoute(coords, 100);
   let elev = null;
   try { const e = await getJSON("https://api.open-meteo.com/v1/elevation?latitude=" + smp.pts.map(p => p[0].toFixed(4)).join(",") + "&longitude=" + smp.pts.map(p => p[1].toFixed(4)).join(","), 15000); elev = e.elevation; } catch {}
-  return S.routeCache[key] = { km: g.distance / 1000, h: g.duration / 3600, coords, elev, segKm: (g.distance / 1000) / 99 };
+  return S.routeCache[key] = { key, km: g.distance / 1000, h: g.duration / 3600, coords, elev, segKm: (g.distance / 1000) / 99 };
 }
 function terrainFuel(rt, d) {
   const hwy = S.mileage, hill = hillMileage();
@@ -291,11 +298,112 @@ function terrainFuel(rt, d) {
   }
   return { oneWay: up, back: down, flat, plainKm, hillKm, ascent, maxEl };
 }
+/* ---------- real toll plazas on the route (data/tolls.json, NHAI) ---------- */
+function loadTolls() { return S.tollsP || (S.tollsP = getJSON("data/tolls.json", 20000).then(j => {
+  const F = j.fields; S.tollMeta = j; const rows = j.rows.map(r => Object.fromEntries(F.map((f, i) => [f, r[i]])));
+  const fs = rows.filter(r => r.src === "nhai" && r.single).map(r => r.single).sort((a, b) => a - b); S.tollMedian = fs.length ? fs[fs.length >> 1] : 100; return rows; }).catch(e => { console.warn("tolls", e); S.tollsP = null; return null; })); }
+function loadExplore() { return S.exploreP || (S.exploreP = getJSON("data/explore.json", 20000).then(j => (S.exploreMeta = j, j.spots)).catch(e => { console.warn("explore", e); S.exploreP = null; return null; })); }
+function matchTolls(coords, plazas, maxKm = 0.3) { // plazas within maxKm of the route polyline, in driving order
+  let a = 90, b = 180, c = -90, e = -180; coords.forEach(([x, y]) => { if (y < a) a = y; if (y > c) c = y; if (x < b) b = x; if (x > e) e = x; });
+  const pad = 0.01, near = plazas.filter(p => p.lat > a - pad && p.lat < c + pad && p.lon > b - pad && p.lon < e + pad);
+  if (!near.length) return [];
+  const cum = [0]; for (let i = 1; i < coords.length; i++) cum.push(cum[i-1] + hav(coords[i-1][1], coords[i-1][0], coords[i][1], coords[i][0]));
+  const out = [];
+  near.forEach(p => { const kx = Math.cos(p.lat * Math.PI / 180) * 111.32, ky = 110.57; let best = 1e9, at = 0;
+    for (let i = 0; i < coords.length - 1; i++) {
+      const ax = (coords[i][0] - p.lon) * kx, ay = (coords[i][1] - p.lat) * ky, bx = (coords[i+1][0] - p.lon) * kx, by = (coords[i+1][1] - p.lat) * ky;
+      if (Math.min(Math.abs(ax), Math.abs(bx)) > 5 && ax * bx > 0) continue; if (Math.min(Math.abs(ay), Math.abs(by)) > 5 && ay * by > 0) continue;
+      const dx = bx - ax, dy = by - ay, L = dx * dx + dy * dy, t = L ? Math.max(0, Math.min(1, -(ax * dx + ay * dy) / L)) : 0;
+      const dd = Math.hypot(ax + t * dx, ay + t * dy); if (dd < best) { best = dd; at = cum[i] + t * (cum[i+1] - cum[i]); } }
+    if (best <= maxKm) out.push({ ...p, off: best, at }); });
+  out.sort((x, y) => x.at - y.at);
+  return out.filter((p, i) => !out.slice(0, i).some(q => Math.abs(q.at - p.at) < 0.3 && q.name === p.name));
+}
+function tollTotals(list) {
+  const known = list.filter(p => p.single), unknown = list.filter(p => !p.single);
+  const one = known.reduce((t, p) => t + p.single, 0);
+  const ret24 = known.reduce((t, p) => t + Math.min(p.ret || 2 * p.single, 2 * p.single), 0);
+  const approx = unknown.length * (S.tollMedian || 100); // fallback for plazas with no published fare, always labelled approx
+  return { one, round: 2 * one, ret24, known, unknown, approx, oneAll: one + approx, roundAll: 2 * (one + approx) };
+}
+function tollRowsHTML(list) {
+  if (!list.length) return `<p class="muted">No toll plazas found on this route in the NHAI data.</p>`;
+  return `<ol class="tolllist">${list.map(p => `<li><span><b>${esc(p.name)}</b><small>${p.hw ? "NH " + esc(String(p.hw).replace(/^NH[\s-]*/i, "")) + " · " : ""}${Math.round(p.at)} km from start${p.src === "state" ? " · state highway data" : ""}</small></span>
+    <span class="fare">${p.single ? `${inr(p.single)}<small>${p.ret ? `return ${inr(p.ret)}` : "one way"}</small>` : `<em>${p.closed ? "by distance" : "fare unknown"}</em><small>${p.closed ? "closed-loop, paid at exit" : "not published"}</small>`}</span></li>`).join("")}</ol>`;
+}
+const SPOT_IC = { viewpoint: "🔭", waterfall: "💧", lake: "🏞️", glacier: "🧊", peak: "⛰️", village: "🏘️", temple: "🛕", monastery: "☸️", walk: "🥾", meadow: "🌾", pass: "🛣️", hot_spring: "♨️", fort: "🏰", park: "🌲", attraction: "📍", river: "🌊", cave: "🕳️" };
+function exploreHTML(d, spots) {
+  if (!spots || !spots.length) return `<p class="muted">No verified spots listed yet.</p>`;
+  return `<div class="spots">${spots.map((p, i) => `<article class="spot">
+    <div class="sph">${p.photo ? `<img loading="lazy" src="${esc(p.photo.src)}" alt="${esc(p.name)}" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('noph');this.remove()">
+      <a class="credit" href="${esc(p.photo.page)}" target="_blank" rel="noopener">📷 ${esc(p.photo.author)} · ${esc(p.photo.license)}</a>` : ""}<span class="spn">${i + 1}</span><span class="spt">${SPOT_IC[p.type] || "📍"} ${esc(p.type.replace("_", " "))}</span></div>
+    <div class="spb"><h4>${esc(p.name)}</h4><p>${esc(p.desc)}</p>
+      <div class="spf"><span>${p.km < 1 ? "in " + esc(d.name.split(" /")[0]) : `${p.km.toFixed(p.km < 10 ? 1 : 0)} km away`}${p.ele ? ` · ${p.ele.toLocaleString("en-IN")} m` : ""}</span>
+      <a href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}" target="_blank" rel="noopener">Google Maps ↗</a>${p.wiki ? `<a href="${esc(p.wiki)}" target="_blank" rel="noopener">Wiki</a>` : ""}</div></div></article>`).join("")}</div>
+    <p class="muted">Spots from OpenStreetMap${S.exploreMeta ? " & Wikipedia/Wikidata" : ""}; photos from Wikimedia Commons (credited). Straight-line distance from ${esc(d.name)} — roads to some spots close in heavy snow.</p>`;
+}
+function spotMarkers(map, spots, layer) {
+  (spots || []).forEach((p, i) => L.marker([p.lat, p.lon], { icon: L.divIcon({ className: "pin-spot", html: `<span>${i + 1}</span>`, iconSize: [24, 24], iconAnchor: [12, 12] }) })
+    .bindPopup(`<b>${SPOT_IC[p.type] || "📍"} ${esc(p.name)}</b><br>${esc(p.desc)}<br><a href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}" target="_blank" rel="noopener">Open in Google Maps</a>`).addTo(layer || map));
+}
+/* ---------- fuel stations along the route (OSM tiles in data/stations, live Overpass top-up for CNG/EV) ---------- */
+function thinCoords(coords, maxPts = 2500) { if (coords.length <= maxPts) return coords; const k = Math.ceil(coords.length / maxPts), o = [];
+  for (let i = 0; i < coords.length; i += k) o.push(coords[i]); o.push(coords[coords.length - 1]); return o; }
+function stationKind(car) { return car.fuel === "cng" ? "c" : car.fuel === "ev" ? "e" : "p"; }
+const ST_LABEL = { p: ["⛽", "Pumps", "fuel pump"], c: ["🟢", "CNG", "CNG station"], e: ["🔌", "Chargers", "EV charger"] };
+async function stationsFor(rt, kind) {
+  const key = (rt.key || "") + kind; S.stCache = S.stCache || {}; if (S.stCache[key]) return S.stCache[key];
+  if (!S.stIdx) S.stIdx = getJSON("data/stations/index.json", 15000).catch(() => null);
+  const idx = await S.stIdx; const thin = thinCoords(rt.coords), need = new Set();
+  thin.forEach(([x, y]) => { for (const dy of [-0.02, 0.02]) for (const dx of [-0.02, 0.02]) need.add(`${Math.floor(y + dy)}_${Math.floor(x + dx)}`); });
+  const tiles = [...need].filter(k => !idx || idx.tiles[k]);
+  const rows = (await Promise.all(tiles.map(k => getJSON(`data/stations/${k}.json`, 15000).catch(() => [])))).flat();
+  let pts = rows.filter(r => r[4].includes(kind)).map(r => ({ lat: r[0], lon: r[1], name: r[2], brand: r[3], flags: r[4] }));
+  let live = false;
+  if (kind !== "p") { // CNG & chargers are thinly mapped: try a live Overpass top-up along the route, silently fall back to the tiles
+    try { const smp = sampleRoute(rt.coords, Math.min(80, Math.max(10, Math.round(rt.km / 8)))).pts.map(p => `${p[0].toFixed(4)},${p[1].toFixed(4)}`).join(",");
+      const q = kind === "c" ? `node["amenity"="fuel"]["fuel:cng"="yes"](around:2000,${smp});node["amenity"="fuel"]["name"~"CNG|IGL|MGL",i](around:2000,${smp});` : `nwr["amenity"="charging_station"](around:2000,${smp});`;
+      const j = await getJSON("https://overpass-api.de/api/interpreter?data=" + encodeURIComponent(`[out:json][timeout:12];(${q});out center 400;`), 14000);
+      (j.elements || []).forEach(e => { const la = e.lat ?? e.center?.lat, lo = e.lon ?? e.center?.lon; if (la == null) return;
+        if (!pts.some(p => Math.abs(p.lat - la) < 0.0008 && Math.abs(p.lon - lo) < 0.0008)) pts.push({ lat: la, lon: lo, name: e.tags?.name || "", brand: e.tags?.brand || e.tags?.operator || "", flags: kind }); });
+      live = true; } catch (e) { /* Overpass busy: tiles only */ }
+  }
+  const m = matchTolls(thin, pts, 1.5);
+  return S.stCache[key] = { list: m, live };
+}
+function stationGaps(list, km, kind) {
+  const lim = kind === "p" ? 100 : 80, out = []; let prev = { at: 0, name: "the start" };
+  [...list, { at: km, end: true }].forEach(p => { if (p.at - prev.at > lim) out.push({ from: prev, to: p, gap: p.at - prev.at }); if (!p.end) prev = p; });
+  return out;
+}
+let stLayer = null;
+function drawStations(map, list, kind) {
+  if (stLayer) { map.removeLayer(stLayer); map.off("zoomend", stLayer._redraw); }
+  stLayer = L.layerGroup(); const [ic, , what] = ST_LABEL[kind];
+  const pop = p => `<b>${ic} ${esc(p.name || p.brand || what)}</b>${p.brand && p.name && !p.name.includes(p.brand) ? `<br>${esc(p.brand)}` : ""}<br>${Math.round(p.at)} km from start${p.flags.includes("c") && kind === "p" ? " · CNG too" : ""}<br><a href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}" target="_blank" rel="noopener">Directions ↗</a>`;
+  const lay = stLayer;
+  lay._redraw = () => { lay.clearLayers(); const z = map.getZoom(), cells = {};
+    list.forEach(p => { const pt = map.project([p.lat, p.lon], z), k = Math.floor(pt.x / 46) + ":" + Math.floor(pt.y / 46); (cells[k] = cells[k] || []).push(p); });
+    Object.values(cells).forEach(g => { if (g.length === 1 || z >= 14) g.forEach(p => L.marker([p.lat, p.lon], { icon: L.divIcon({ className: "pin-fuel k" + kind, html: ic, iconSize: [20, 20], iconAnchor: [10, 10] }) }).bindPopup(pop(p)).addTo(lay));
+      else { const la = g.reduce((t, p) => t + p.lat, 0) / g.length, lo = g.reduce((t, p) => t + p.lon, 0) / g.length;
+        L.marker([la, lo], { icon: L.divIcon({ className: "pin-fuel cl k" + kind, html: `${ic}<b>${g.length}</b>`, iconSize: [38, 22], iconAnchor: [19, 11] }) })
+          .on("click", () => map.fitBounds(L.latLngBounds(g.map(p => [p.lat, p.lon])), { padding: [30, 30], maxZoom: 15 })).addTo(lay); } }); };
+  map.on("zoomend", lay._redraw); lay._redraw(); lay.addTo(map); return lay;
+}
+function fuelBoxHTML(st, rt, d, kind) {
+  const [ic, lbl, what] = ST_LABEL[kind], list = st.list, gaps = stationGaps(list, rt.km, kind), last = list[list.length - 1];
+  const nm = p => p.name || p.brand ? esc(p.name || p.brand) : `an unnamed ${what}`;
+  let warn = "";
+  if (kind !== "p") warn = gaps.map(g => `<div class="warnbox">⚠️ No ${kind === "c" ? "CNG" : "charger"} mapped for the next <b>${Math.round(g.gap)} km</b> ${g.from.at === 0 ? "from the start" : `after <b>${nm(g.from)}</b> (km ${Math.round(g.from.at)})`}${g.to.end ? `, all the way to ${esc(d.name.split(" /")[0])}` : ""}. ${g.from.at > 0 ? `Fill up at ${nm(g.from)}.` : "Start with a full tank."}${kind === "c" ? " Keep petrol as backup." : ""}</div>`).join("");
+  const lastTxt = last ? `Last ${what} before ${esc(d.name.split(" /")[0])}: <b>${nm(last)}</b>, ${Math.round(rt.km - last.at)} km before you arrive.` : `No ${what} mapped on this route.`;
+  return `<div class="fuelbar"><button class="chip on" id="stToggle" aria-pressed="true">${ic} ${lbl} on route (${list.length})</button><span class="muted">${lastTxt}</span></div>${warn}
+    <p class="muted">${what[0].toUpperCase() + what.slice(1)}s within 1.5 km of the route, from OpenStreetMap${st.live ? " + a live Overpass check" : ""}. Tap a pin for directions.${kind !== "p" ? " OSM misses some stations, so also check the IGL/MGL or charger apps." : ""}</p>`;
+}
 let rMap;
 function fitRouteMap(m) { // re-measure the container (it may have been hidden/animating) and fit the route
   if (!m || m !== rMap) return; const el = m.getContainer(); if (!el.offsetWidth || !el.offsetHeight) return;
   m.invalidateSize({ animate: false });
-  if (m._fit) m.fitBounds(m._fit, { padding: [24, 24], animate: false });
+  if (m._fit) m.fitBounds(m._fit, { paddingTopLeft: [24, 48], paddingBottomRight: [24, 24], animate: false });
 }
 async function openDetail(id, push = true) {
   const d = S.dests.find(x => x.id === id); if (!d) return;
@@ -314,20 +422,27 @@ async function openDetail(id, push = true) {
     <div class="gallery">${gal}</div>
     <div class="dhead"><h2 id="dName">${esc(d.name)}</h2>
       <div class="pills"><span class="pill">📍 ${esc(d.area)}, ${esc(d.state)}</span><span class="pill">⛰️ ${d.elevation_m.toLocaleString("en-IN")} m</span>
-      <span class="pill">${s.txt}</span>${w && w.depth ? `<span class="pill">⛄ ~${w.depth} cm on ground (model)</span>` : ""}${d.offbeat ? '<span class="pill">🌿 Offbeat</span>' : ""}</div></div>
-    <div class="dsec"><h3>🛣️ Route & cost ${S.from ? `<span class="muted">from ${esc(S.from.name)}</span>` : ""}</h3><div id="routeBox">${S.from ? '<div class="skeleton" style="height:160px"></div>' : '<p class="muted">Set a starting point above to see the route and cost.</p>'}</div>
-      <div id="routeMap" style="margin-top:12px"></div></div>
-    <div class="dsec"><h3>🌨️ 16-day snow & temperature</h3><div class="fc">${fc}</div>
-      <p class="muted">Open-Meteo model forecast at ${d.elevation_m} m${S.wxTime ? `, fetched ${S.wxTime.toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit" })} IST` : ""}. Forecasts beyond ~5 days are less reliable.</p></div>
-    <div class="dsec"><h3>🛡️ Road safety</h3><div class="safety"><div class="meter l${sf.lvl}">${sf.label}</div>
+      <span class="pill">${s.txt}</span><span class="pill safe-badge l${sf.lvl}">${["", "✅", "⚠️", "⛔"][sf.lvl]} ${sf.label}</span>${d.offbeat ? '<span class="pill">🌿 Offbeat</span>' : ""}</div></div>
+    <nav class="dnav" aria-label="Sections"><a href="#s-map">🗺️ Map</a><a href="#s-cost">💸 Cost</a><a href="#s-tolls">🧾 Tolls</a><a href="#s-explore">📸 Explore</a><a href="#s-weather">🌨️ Weather</a><a href="#s-safety">🛡️ Safety</a><a href="#s-share">📤 Share</a></nav>
+    <div class="dsec" id="s-map"><h3>🗺️ Map ${S.from ? `<span class="muted">${esc(S.from.name)} → ${esc(d.name)}</span>` : ""}</h3>
+      <div id="routeMap"></div>
+      <div class="maplegend"><span><i style="background:#22c55e;border-radius:50%"></i>Start</span><span><i style="background:#38bdf8"></i>Route</span><span><i style="background:#f59e0b;border-radius:3px"></i>Toll plaza</span><span><i style="background:#ec4899;border-radius:50%"></i>Explore spot</span><span><i style="background:#16a34a;border-radius:50%"></i>${ST_LABEL[stationKind(S.car)][1]}</span></div>
+      <div id="fuelBox"></div></div>
+    <div class="dsec" id="s-cost"><h3>💸 Cost</h3><div id="routeBox">${S.from ? '<div class="skeleton" style="height:160px"></div>' : '<p class="muted">Set a starting point above to see the route and cost.</p>'}</div></div>
+    <div class="dsec" id="s-tolls"><h3>🧾 Tolls on the way</h3><div id="tollBox">${S.from ? '<div class="skeleton" style="height:90px"></div>' : '<p class="muted">Set a starting point to see toll plazas.</p>'}</div></div>
+    <div class="dsec" id="s-explore"><h3>📸 Explore & photo spots</h3><div id="exploreBox"><div class="skeleton" style="height:120px"></div></div></div>
+    <div class="dsec" id="s-weather"><h3>🌨️ Weather · 16 days</h3><div class="fc">${fc}</div>
+      <p class="muted">Open-Meteo model forecast at ${d.elevation_m} m${S.wxTime ? `, fetched ${S.wxTime.toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit" })} IST` : ""}. Beyond ~5 days it is less reliable.</p></div>
+    <div class="dsec" id="s-safety"><h3>🛡️ Road safety</h3><div class="safety"><div class="meter l${sf.lvl}">${sf.label}</div>
       <div><p>${esc(d.safety)}</p><ul>${sf.why.map(([a, b]) => `<li><b>${esc(a)}:</b> ${esc(b)}</li>`).join("")}</ul>
       <p class="muted" style="margin-top:6px">A guide from forecast + road type, not live road status. Check with local police or your stay before driving.</p></div></div></div>
-    <div class="dsec"><h3>🏡 Stays nearby</h3><div class="stays"><p>Verified partner stays are coming soon. Until then, search directly (BarfChalo does not get paid for these links):</p>
+    <div class="dsec"><h3>🏡 Stays nearby</h3><div class="stays"><p>Search directly (BarfChalo does not get paid for these links):</p>
       <div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://www.booking.com/searchresults.html?ss=${q}">Booking.com</a>
       <a class="btn" target="_blank" rel="noopener" href="https://www.airbnb.co.in/s/${encodeURIComponent(d.name + ", " + d.state)}/homes">Airbnb</a>
       <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/homestay+near+${q}">Google Maps</a></div></div></div>
-    <div class="dsec" style="padding-bottom:28px"><h3>📤 Share this trip</h3><div class="btns" id="shareBtns"></div></div>`;
+    <div class="dsec" id="s-share" style="padding-bottom:28px"><h3>📤 Share this trip</h3><div class="btns" id="shareBtns"></div></div>`;
   $("#sheet .sheet-card").scrollTop = 0;
+  $("#detail .dnav").onclick = e => { const a = e.target.closest("a"); if (!a) return; e.preventDefault(); const t = $(a.getAttribute("href")); t && t.scrollIntoView({ behavior: "smooth", block: "start" }); };
   rMap && rMap.remove(); rMap = null;
   if (window.L) { rMap = L.map("routeMap", { scrollWheelZoom: false, attributionControl: false, zoomSnap: 0.25 }).setView([d.lat, d.lon], 9);
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: '&copy; OpenStreetMap contributors · Route: OSRM' }).addTo(rMap);
@@ -339,34 +454,58 @@ async function openDetail(id, push = true) {
     $("#sheet .sheet-card").addEventListener("animationend", () => fitRouteMap(m), { once: true });
     if (window.ResizeObserver) { const ro = new ResizeObserver(() => fitRouteMap(m)); ro.observe($("#routeMap")); m.on("unload", () => ro.disconnect()); } }
   renderShare(d, null);
+  // Explore spots load independently of routing
+  loadExplore().then(all => { if ($("#dName")?.textContent !== d.name) return; const sp = all ? all[d.id] || [] : null;
+    $("#exploreBox").innerHTML = all ? exploreHTML(d, sp) : `<p class="muted">Couldn't load spots right now.</p>`;
+    if (rMap && sp && sp.length) { spotMarkers(rMap, sp); rMap._spots = sp;
+      rMap._fit = rMap._fit ? L.latLngBounds(rMap._fit.getSouthWest(), rMap._fit.getNorthEast()).extend(L.latLngBounds(sp.map(p => [p.lat, p.lon]))) : (!S.from ? L.latLngBounds([[d.lat, d.lon], ...sp.map(p => [p.lat, p.lon])]) : null);
+      fitRouteMap(rMap); } });
   if (!S.from) return;
   try {
-    const rt = await routeFor(d); if ($("#dName")?.textContent !== d.name) return;
+    const [rt, plazas] = await Promise.all([routeFor(d), loadTolls()]); if ($("#dName")?.textContent !== d.name) return;
     const tf = terrainFuel(rt, d), units = tf.oneWay + tf.back, fuel = units * S.price;
-    const toll = round50(tf.plainKm * 1.5) * 2, total = fuel + toll, per = total / S.pax;
+    let toll, tollNote, tl = null, tt = null;
+    if (plazas) { tl = matchTolls(rt.coords, plazas); tt = tollTotals(tl); toll = tt.roundAll;
+      tollNote = `${tt.known.length} plaza${tt.known.length === 1 ? "" : "s"} × 2${tt.unknown.length ? ` · ${tt.unknown.length} unknown fare${tt.unknown.length === 1 ? "" : "s"} ≈ approx` : ""}`; }
+    else { toll = round50(tf.plainKm * 1.5) * 2; tollNote = "approx ±30%, toll data didn't load"; }
+    const total = fuel + toll, per = total / S.pax;
     const hrs = driveHours(rt.h, tf.hillKm / rt.km);
     const terr = tf.flat ? Math.round((units / tf.flat - 1) * 100) : 0, u = fuelUnit(S.car.fuel);
     const warn = S.car.fuel === "cng" ? "CNG pumps are rare in the hills — expect to run on petrol for part of the trip." :
                  S.car.fuel === "ev" ? "Fast chargers are few in the mountains. Plan charging stops before you go." : "";
     $("#routeBox").innerHTML = `<div class="tiles">
+      <div class="tile big"><div class="ic">👥</div><b>${inr(per)}</b><span>per person (${S.pax} log) · fuel + tolls, round trip</span></div>
       <div class="tile"><div class="ic">🛣️</div><b>${Math.round(rt.km)} km</b><span>one way by road</span></div>
       <div class="tile"><div class="ic">⏱️</div><b>${Math.floor(hrs)}h ${Math.round((hrs % 1) * 60)}m</b><span>realistic drive (map says ${rt.h.toFixed(1)} h)</span></div>
       <div class="tile"><div class="ic">⛽</div><b>${units.toFixed(0)} ${u === "litre" ? "L" : u}</b><span>round trip · ${terr >= 0 ? "+" : ""}${terr}% for hills</span></div>
-      <div class="tile"><div class="ic">⛰️</div><b>${tf.ascent != null ? Math.round(tf.ascent).toLocaleString("en-IN") + " m" : "—"}</b><span>total climb, highest ${Math.round(tf.maxEl).toLocaleString("en-IN")} m</span></div>
-      <div class="tile big"><div class="ic">👥</div><b>${inr(per)}</b><span>per person (${S.pax}) · fuel + tolls</span></div></div>
+      <div class="tile"><div class="ic">⛰️</div><b>${tf.ascent != null ? Math.round(tf.ascent).toLocaleString("en-IN") + " m" : "—"}</b><span>total climb, highest ${Math.round(tf.maxEl).toLocaleString("en-IN")} m</span></div></div>
       <table class="costs" style="margin-top:12px">
         <tr><td>⛽ Fuel there (${tf.oneWay.toFixed(1)} ${u}) + back (${tf.back.toFixed(1)} ${u}) × ₹${S.price}</td><td>${inr(fuel)}</td></tr>
-        <tr><td>🧾 Tolls, round trip <span class="muted">(approx, ±30%)</span></td><td>${inr(toll)}</td></tr>
+        <tr><td>🧾 Tolls, round trip <span class="muted">(${tollNote})</span></td><td>${inr(toll)}</td></tr>
         <tr class="total"><td>Total for the car</td><td>${inr(total)}</td></tr></table>
-      <p class="muted">Car: ${esc(S.car.brand + " " + S.car.model)} (${S.car.fuel}) at ~${S.mileage} km/${u === "litre" ? "l" : u} highway, worse on climbs and better on descents. Stays and food are not included. Tolls are a rough estimate (~₹1.5/km on plains highways) — check your FASTag SMS.</p>
+      <p class="muted">${esc(S.car.brand + " " + S.car.model)} (${S.car.fuel}) at ~${S.mileage} km/${u === "litre" ? "l" : u} highway, worse on climbs. Stays and food not included.</p>
       ${warn ? `<div class="warnbox">⚠️ ${warn}</div>` : ""}`;
+    $("#tollBox").innerHTML = tt ? `<div class="tollsum"><div><b>${tt.approx ? "≈ " : ""}${inr(tt.oneAll)}</b><span>one way${tt.approx ? " (approx)" : ""}</span></div><div><b>${tt.approx ? "≈ " : ""}${inr(tt.roundAll)}</b><span>round trip (2 × one way)</span></div><div><b>${tt.approx ? "≈ " : ""}${inr(tt.ret24 + 2 * tt.approx)}</b><span>if back within 24 h (return pass)</span></div></div>
+      ${tt.unknown.length ? `<div class="warnbox">Known NHAI fares: ${inr(tt.one)} one way. ${tt.unknown.length} plaza${tt.unknown.length === 1 ? " has" : "s have"} no published fare, so we add ≈ ${inr(S.tollMedian || 100)} each (typical NHAI car fare) — <b>approx</b>.</div>` : ""}
+      ${tollRowsHTML(tl)}
+      <p class="muted">Car/Jeep/Van FASTag fares from NHAI toll plaza data${S.tollMeta ? ` (open dataset, fetched ${esc(S.tollMeta.generated)})` : ""}, matched within 300 m of this route. A return pass is valid only for 24 h, so a multi-day trip pays one way twice. Cash/no-FASTag pays double. Some state entry taxes and city barriers aren't listed.</p>`
+      : `<div class="warnbox">Toll data didn't load — using a rough estimate of ${inr(toll)} round trip (approx).</div>`;
     if (rMap) { const line = L.polyline(rt.coords.map(c => [c[1], c[0]]), { color: "#38bdf8", weight: 5, opacity: .9 }).addTo(rMap);
       L.circleMarker([S.from.lat, S.from.lon], { radius: 8, color: "#fff", fillColor: "#22c55e", fillOpacity: 1 }).addTo(rMap).bindPopup("Start: " + esc(S.from.name));
-      rMap._fit = line.getBounds(); fitRouteMap(rMap); const m = rMap; [200, 600].forEach(t => setTimeout(() => fitRouteMap(m), t)); }
+      (tl || []).forEach(p => L.marker([p.lat, p.lon], { icon: L.divIcon({ className: "pin-toll", html: "₹", iconSize: [22, 22], iconAnchor: [11, 11] }), zIndexOffset: 500 }).addTo(rMap)
+        .bindPopup(`<b>🧾 ${esc(p.name)}</b><br>${p.single ? `Car: ${inr(p.single)} one way${p.ret ? ` · ${inr(p.ret)} return (24 h)` : ""}` : p.closed ? "Closed-loop expressway: charged by distance at exit" : "Fare not published"}${p.hw ? `<br>NH ${esc(p.hw)}` : ""}`));
+      rMap._fit = line.getBounds(); if (rMap._spots) rMap._fit.extend(L.latLngBounds(rMap._spots.map(p => [p.lat, p.lon]))); fitRouteMap(rMap); const m = rMap; [200, 600].forEach(t => setTimeout(() => fitRouteMap(m), t)); }
     renderShare(d, { km: rt.km, hrs, total, per });
+    const kind = stationKind(S.car);
+    stationsFor(rt, kind).then(st => { if ($("#dName")?.textContent !== d.name || !$("#fuelBox")) return;
+      $("#fuelBox").innerHTML = fuelBoxHTML(st, rt, d, kind);
+      const lay = rMap ? drawStations(rMap, st.list, kind) : null;
+      $("#stToggle").onclick = e => { const on = e.currentTarget.classList.toggle("on"); e.currentTarget.setAttribute("aria-pressed", on); if (lay && rMap) on ? lay.addTo(rMap) : rMap.removeLayer(lay); };
+    }).catch(e => { console.warn("stations", e); $("#fuelBox") && ($("#fuelBox").innerHTML = `<p class="muted">Fuel stations couldn't load right now.</p>`); });
   } catch (e) {
     console.warn(e);
     $("#routeBox").innerHTML = `<div class="warnbox">⚠️ The free routing server is busy or couldn't find a road route. <button class="btn" id="retry">Try again</button></div>`;
+    $("#tollBox").innerHTML = `<p class="muted">Needs the route — try again above.</p>`;
     $("#retry").onclick = () => openDetail(id, false);
   }
 }
@@ -434,6 +573,6 @@ async function init() {
   document.addEventListener("visibilitychange", () => { if (!document.hidden && S.wxTime && Date.now() - S.wxTime > 15 * 60 * 1000) refreshWeather(false); });
   Stats.pageview(); Stats.showTrips();
 }
-function refresh() { renderStats(); renderCards(); }
+function refresh() { updateMoreSum(); renderStats(); renderCards(); }
 init().catch(e => { console.error(e); $("#cards").innerHTML = `<p class="warnbox">Something went wrong loading BarfChalo. Please refresh.</p>`; });
 })();

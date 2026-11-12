@@ -8,16 +8,21 @@ A free, fully static snow-trip planner for anyone in India:
 - Pick your car from ~90 popular Indian car variants (approx real-world mileage), override mileage and fuel price
 - 43 snow destinations across Himachal, Uttarakhand, Jammu & Kashmir and Sikkim, incl. offbeat villages, with Wikimedia Commons photos (credited)
 - Real road routes (public OSRM server) on a Leaflet + OpenStreetMap map
-- Round-trip fuel with a terrain adjustment from the route's elevation profile (Open-Meteo elevation API), approx tolls, cost per person
+- Round-trip fuel with a terrain adjustment from the route's elevation profile (Open-Meteo elevation API), real toll plazas on the route with NHAI car fares, cost per person
 - Live 16-day snow + temperature forecast and modelled snow depth (Open-Meteo), "snow this week" badges, ranking by snow + distance + risk
+- Explore & photo spots (viewpoints, waterfalls, lakes, villages, famous temples/monasteries) per destination, with credited Commons photos
+- Fuel pumps / CNG stations / EV chargers along the route for the selected car, with long-gap warnings for CNG/EV
 - Road-safety indicator, WhatsApp/share links that rebuild the exact trip
 
 ## Honesty rules
-Mileage, state fuel prices and tolls are **approximate** and labelled so in the UI. No reviews, users or listings are invented. "Stays nearby" only links to public search pages until real partners exist.
+Mileage and state fuel prices are **approximate**; toll fares come from NHAI data, and plazas with no published fare are shown as unknown with an approx fallback, and labelled so in the UI. No reviews, users or listings are invented. "Stays nearby" only links to public search pages until real partners exist.
 
 ## Data
 - `data/destinations.json` — built by `scripts/build_destinations.py` (Nominatim coords, Open-Meteo DEM elevation, Commons photos). Seeds in `scripts/seeds.py`.
 - `data/cars.json` — generated from `scripts/cars.py` (+ approx state fuel prices).
+- `data/tolls.json` — `scripts/build_tolls.py`: NHAI toll plazas (RajMargyatra/TIS, via the open github.com/ForceGT/india-toll-plazas dataset) with Car/Jeep/Van single + return fares. Matched in the browser to plazas within 300 m of the OSRM route. Re-run monthly / after April fare revisions.
+- `data/explore.json` — `scripts/explore/` pipeline: OpenStreetMap features from Geofabrik India extracts (`osm.py`) + Wikidata geo search (`wd.py`) → filter/score (`build.py`, `select.py`) → Commons photo lookup (`photos.py`) → Wikipedia one-liners, photo credits (`finalize.py`). Only free-licence photos are kept.
+- `data/stations/` — `scripts/build_fuel_stations.py`: amenity=fuel and amenity=charging_station from OpenStreetMap (Geofabrik India extracts), 1°×1° tiles loaded only for the tiles the route crosses. CNG = fuel:cng=yes or a city-gas brand name. CNG/EV also get a live Overpass top-up when the server answers.
 
 ## Run locally
 ```bash
