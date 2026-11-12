@@ -1,3 +1,4 @@
+# To activate: copy this file to .github/workflows/refresh-data.yml (needs a GitHub token with the "workflow" scope, or add it via the GitHub web editor).
 name: Refresh live data
 on:
   schedule:

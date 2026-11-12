@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BarfChalo — live reach</title><meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<style>
+body{margin:0;background:#0b1424;color:#eef5ff;font:16px/1.5 "Plus Jakarta Sans",system-ui,sans-serif}
+.w{max-width:960px;margin:0 auto;padding:22px 16px 40px}a{color:#7dd3fc}
+h1{font-size:30px;margin:6px 0 4px;letter-spacing:-.02em}.m{color:#9fb3d1;font-size:14px}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:18px 0}
+.c{padding:16px;border-radius:16px;background:#14233d;border:1px solid #24375a}.c b{display:block;font-size:34px;font-weight:800;line-height:1.1}.c span{color:#9fb3d1;font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}td,th{padding:8px 6px;border-bottom:1px solid #24375a;text-align:right}td:first-child,th:first-child{text-align:left}
+.bar{display:inline-block;height:10px;border-radius:4px;background:#7dd3fc;vertical-align:middle;margin-left:6px}
+.box{padding:16px;border-radius:16px;background:#14233d;border:1px solid #24375a;margin-top:16px}
+</style></head><body><div class="w">
+<a href="./">← BarfChalo</a>
+<h1>📊 Live reach</h1>
+<p class="m">Real counts from the free <a href="https://abacus.jasoncameron.dev" target="_blank" rel="noopener">Abacus</a> counter API. No cookies, no personal data, no fake numbers. Counting started 12 Nov 2026 at 0. Loaded <span id="at">…</span></p>
+<div class="g" id="tot"></div>
+<div class="box"><b>Last 14 days</b> <span class="m">(IST days)</span><table id="days"><tr><th>Day</th><th>Page views</th><th>Unique visitors</th><th>Trips opened</th><th>WhatsApp shares</th></tr></table></div>
+<div class="box m"><b style="color:#eef5ff">How to read this</b><br>
+<b>Page views</b> = every time the site is opened. <b>Unique visitors</b> = browsers counted once ever (and once per day in the daily table). <b>Trips opened</b> = someone opened a destination's route &amp; cost. <b>WhatsApp / link shares</b> = taps on the share buttons.
+Visitors who clear browser storage or switch devices are counted again, and ad-blockers may block counting, so treat these as close estimates.</div>
+</div>
+<script>
+const API="https://abacus.jasoncameron.dev",NS="barfchalo",sleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function get(k){try{const r=await fetch(`${API}/get/${NS}/${k}`);const j=await r.json();return j.value>0?j.value:0}catch{return 0}}
+const fmt=n=>Number(n).toLocaleString("en-IN");
+(async()=>{
+ document.getElementById("at").textContent=new Date().toLocaleString("en-IN",{timeZone:"Asia/Kolkata",dateStyle:"medium",timeStyle:"short"})+" IST";
+ const T=[["pageviews","👀 Page views"],["visitors","🧑 Unique visitors"],["trips","🧭 Trips opened"],["whatsapp","🟢 WhatsApp shares"],["shares","🔗 Link shares"]];
+ const tot=document.getElementById("tot");
+ for(const [k,l] of T){const v=await get(k);tot.insertAdjacentHTML("beforeend",`<div class="c"><b>${fmt(v)}</b><span>${l}</span></div>`);await sleep(150)}
+ const tb=document.getElementById("days");
+ for(let i=0;i<14;i++){const d=new Date(Date.now()-i*864e5),key=d.toLocaleDateString("en-CA",{timeZone:"Asia/Kolkata"}).replace(/-/g,"");
+  const vals=[];for(const p of ["pv","uv","trips","whatsapp"]){vals.push(await get(p+"-"+key));await sleep(380)}
+  tb.insertAdjacentHTML("beforeend",`<tr><td>${d.toLocaleDateString("en-IN",{timeZone:"Asia/Kolkata",weekday:"short",day:"numeric",month:"short"})}</td>${vals.map((v,j)=>`<td>${fmt(v)}${j===0&&v?`<span class="bar" style="width:${Math.min(120,v)}px"></span>`:""}</td>`).join("")}</tr>`)}
+})();
+</script></body></html>

@@ -10,6 +10,25 @@ const STATE_SHORT = {"Himachal Pradesh":"Himachal","Uttarakhand":"Uttarakhand","
 const S = { dests: [], cars: [], fuel: {}, meta: {}, from: null, car: null, pax: 4, price: null, priceTouched: false,
             mileage: null, milTouched: false, wx: {}, road: {}, filter: "all", offbeat: false, sort: "best", routeCache: {} };
 
+/* ---------- privacy-friendly counters (Abacus, no cookies, no personal data) ---------- */
+const Stats = (() => {
+  const API = "https://abacus.jasoncameron.dev", NS = "barfchalo";
+  const off = navigator.webdriver || /^(localhost|127\.)/.test(location.hostname) || /[?&#]nocount/.test(location.href) || localStorage.getItem("bc_nocount") === "1";
+  const day = () => new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" }).replace(/-/g, "");
+  const hit = k => off ? Promise.resolve(null) : fetch(`${API}/hit/${NS}/${k}`, { keepalive: true }).then(r => r.json()).catch(() => null);
+  const once = (flag, fn) => { try { if (localStorage.getItem(flag)) return; localStorage.setItem(flag, "1"); } catch { return; } fn(); };
+  let tripsOpened = new Set();
+  return {
+    pageview() { hit("pageviews"); hit("pv-" + day());
+      once("bc_seen", () => hit("visitors")); once("bc_seen_" + day(), () => hit("uv-" + day())); },
+    trip() { const k = location.hash; if (tripsOpened.has(k)) return; tripsOpened.add(k);
+      hit("trips").then(r => r && r.value != null && setTrips(r.value)); hit("trips-" + day()); },
+    event(k) { hit(k); hit(k + "-" + day()); },
+    async showTrips() { try { const r = await fetch(`${API}/get/${NS}/trips`).then(r => r.json()); if (r.value != null) setTrips(r.value); } catch {} }
+  };
+  function setTrips(n) { const el = document.getElementById("tripCount"); if (el) { el.hidden = false; el.innerHTML = `🧭 <b>${Number(n).toLocaleString("en-IN")}</b> trip${n === 1 ? "" : "s"} planned on BarfChalo so far`; } }
+})();
+
 /* ---------- helpers ---------- */
 function hav(a, b, c, d) { const R = 6371, r = Math.PI / 180, dp = (c - a) * r, dl = (d - b) * r;
   const h = Math.sin(dp/2)**2 + Math.cos(a*r) * Math.cos(c*r) * Math.sin(dl/2)**2; return 2 * R * Math.asin(Math.sqrt(h)); }
@@ -21,6 +40,8 @@ async function getJSON(url, ms = 20000) {
 function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 2600); }
 function normState(s) { if (!s) return null; s = s.replace(/^NCT of /, "").replace(" and ", " & ").replace("Jammu And Kashmir","Jammu & Kashmir");
   if (/delhi/i.test(s)) return "Delhi"; return Object.keys(S.fuel).find(k => k.toLowerCase() === s.toLowerCase()) || null; }
+function fmtTime(d) { return new Date(d).toLocaleTimeString("en-IN", { hour: "numeric", minute: "2-digit", timeZone: "Asia/Kolkata" }) + " IST"; }
+function fmtDate(d) { return new Date(d).toLocaleDateString("en-IN", { day: "numeric", month: "short", timeZone: "Asia/Kolkata" }) + ", " + fmtTime(d); }
 function fuelUnit(f) { return f === "cng" ? "kg" : f === "ev" ? "kWh" : "litre"; }
 function wIcon(code, snow) { if (snow > 0.2 || [71,73,75,77,85,86].includes(code)) return "🌨️";
   if ([95,96,99].includes(code)) return "⛈️"; if (code >= 51 && code <= 67 || code >= 80 && code <= 82) return "🌧️";
@@ -56,7 +77,9 @@ function setDefaultPrice() {
   let v, note;
   if (f === "cng") { v = S.meta.default_cng; note = "approx CNG ₹/kg · edit"; }
   else if (f === "ev") { v = S.meta.default_ev_kwh; note = "approx home charging ₹/kWh · public fast chargers cost more"; }
-  else { const row = S.fuel[st] || S.fuel["Delhi"]; v = row[f]; note = `approx ${st && S.fuel[st] ? st : "Delhi"} ${f} price · edit`; }
+  else { const known = st && S.fuel[st], row = known ? S.fuel[st] : S.fuel["Delhi"]; v = row[f];
+    const live = S.fuelLive && S.fuelLive.fuel[known ? st : "Delhi"];
+    note = live ? `${known ? st : "Delhi"} avg ${f} today · updated ${fmtDate(S.fuelLive.updated)} · edit` : `approx ${known ? st : "Delhi"} ${f} price · edit`; }
   S.price = v; $("#price").value = v; $("#priceNote").textContent = note;
   $("#priceLbl").textContent = `⛽ ${f === "ev" ? "Power" : "Fuel"} ₹/${fuelUnit(f)}`;
 }
@@ -205,6 +228,18 @@ function renderStats() {
     <div class="stat"><b>${top && S.wx[top.id] ? esc(top.name) : "—"}</b><span>most snow: ${top && S.wx[top.id] ? Math.round(S.wx[top.id].snow7) + " cm in 7 days" : ""}</span></div>
     <div class="stat"><b>${near ? esc(near.name) : "—"}</b><span>${near ? "nearest snow · " + Math.round(S.road[near.id].km) + " km" : "set a start point for distances"}</span></div>`;
 }
+function renderLive() {
+  const el = $("#liveline"); if (!el) return;
+  const wx = S.wxFail ? `⚠️ Snow forecast didn't load` : S.wxTime ? `🟢 Live snow & weather · updated ${fmtTime(S.wxTime)}` : "Loading live forecast…";
+  const fu = S.fuelLive ? `⛽ Fuel prices updated ${fmtDate(S.fuelLive.updated)} (<a href="${esc(S.fuelLive.source_url)}" target="_blank" rel="noopener">GoodReturns</a>)` : "⛽ Fuel prices approx";
+  el.innerHTML = `<span>${wx}</span><span>${fu}</span><span>🛣️ Routes live from OSRM</span><button class="linkbtn" id="refreshNow">↻ Refresh</button>`;
+  $("#refreshNow").onclick = () => refreshWeather(true);
+}
+async function refreshWeather(manual) {
+  if (manual) toast("Refreshing live forecast…");
+  S.wxFail = false; S.wxPromise = loadWeather(); await S.wxPromise;
+  renderLive(); renderStats(); renderCards(); renderOverview();
+}
 function renderChips() {
   const st = ["all", ...new Set(S.dests.map(d => d.state))];
   $("#stateChips").innerHTML = st.map(s => `<button class="chip ${S.filter === s ? "on" : ""}" data-s="${esc(s)}">${s === "all" ? "All" : esc(STATE_SHORT[s] || s)}</button>`).join("");
@@ -260,6 +295,7 @@ let rMap;
 async function openDetail(id, push = true) {
   const d = S.dests.find(x => x.id === id); if (!d) return;
   if (push) history.replaceState(null, "", shareURL(id));
+  Stats.trip();
   const w = S.wx[d.id], s = snowLevel(w), sf = safety(d);
   $("#sheet").hidden = false; document.body.style.overflow = "hidden";
   const gal = d.photos.length ? d.photos.map(p => `<figure><img src="${esc(p.src)}" alt="${esc(d.name)}" referrerpolicy="no-referrer"><figcaption><a href="${esc(p.page)}" target="_blank" rel="noopener">📷 ${esc(p.author)} · ${esc(p.license)} · Wikimedia Commons</a></figcaption></figure>`).join("")
@@ -327,10 +363,11 @@ function renderShare(d, r) {
   const url = shareURL(d.id), w = S.wx[d.id];
   const txt = `❄ ${d.name} (${d.state}) trip — via BarfChalo\n` + (w ? `Snow next 7 days: ${Math.round(w.snow7)} cm (forecast)\n` : "") +
     (r ? `🚗 ${S.from.name} → ${d.name}: ${Math.round(r.km)} km, ~${Math.round(r.hrs)} h one way\n⛽ Fuel + tolls ≈ ${inr(r.total)} → ${inr(r.per)} each for ${S.pax}\n` : "") + url;
-  $("#shareBtns").innerHTML = `<a class="btn wa" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(txt)}">🟢 WhatsApp</a>
+  $("#shareBtns").innerHTML = `<a class="btn wa" id="waBtn" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(txt)}">🟢 WhatsApp</a>
     <button class="btn pri" id="copyBtn">🔗 Copy link</button>${navigator.share ? '<button class="btn" id="natBtn">📤 Share</button>' : ""}`;
-  $("#copyBtn").onclick = async () => { try { await navigator.clipboard.writeText(url); toast("Link copied"); } catch { prompt("Copy this link", url); } };
-  $("#natBtn") && ($("#natBtn").onclick = () => navigator.share({ title: `${d.name} snow trip`, text: txt, url }).catch(() => {}));
+  $("#waBtn").onclick = () => Stats.event("whatsapp");
+  $("#copyBtn").onclick = async () => { Stats.event("shares"); try { await navigator.clipboard.writeText(url); toast("Link copied"); } catch { prompt("Copy this link", url); } };
+  $("#natBtn") && ($("#natBtn").onclick = () => { Stats.event("shares"); navigator.share({ title: `${d.name} snow trip`, text: txt, url }).catch(() => {}); });
 }
 function closeDetail() { $("#sheet").hidden = true; document.body.style.overflow = ""; history.replaceState(null, "", shareURL(null)); }
 
@@ -338,8 +375,8 @@ function closeDetail() { $("#sheet").hidden = true; document.body.style.overflow
 async function run() {
   $("#cards").innerHTML = '<div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>';
   await Promise.all([S.wxPromise, loadRoad()]);
-  renderStats(); renderCards(); renderOverview();
-  history.replaceState(null, "", shareURL(null));
+  renderLive(); renderStats(); renderCards(); renderOverview();
+  if (!$("#sheet").hidden) return; history.replaceState(null, "", shareURL(null));
 }
 function snowfx() {
   const c = $("#snowfx"), x = c.getContext("2d"); let W, H, F;
@@ -353,7 +390,9 @@ function snowfx() {
 async function init() {
   snowfx();
   const [dj, cj] = await Promise.all([getJSON("data/destinations.json"), getJSON("data/cars.json")]);
-  S.dests = dj.destinations; S.cars = cj.cars; S.fuel = cj.fuel; S.meta = cj;
+  S.dests = dj.destinations; S.cars = cj.cars; S.fuel = { ...cj.fuel }; S.meta = cj;
+  try { const fl = await fetch("data/fuel.json?t=" + Date.now(), { cache: "no-store" }).then(r => r.json());
+    if (fl && fl.fuel) { S.fuelLive = fl; Object.entries(fl.fuel).forEach(([k, v]) => S.fuel[k] = v); } } catch {}
   S.wxPromise = loadWeather();
   const h = readHash();
   setFrom(h.from || { name: "New Delhi, Delhi", lat: 28.6139, lon: 77.209, state: "Delhi" });
@@ -378,6 +417,9 @@ async function init() {
   addEventListener("keydown", e => e.key === "Escape" && !$("#sheet").hidden && closeDetail());
   renderChips(); await run();
   if (h.d) openDetail(h.d, false);
+  setInterval(() => refreshWeather(false), 30 * 60 * 1000);   // live forecast auto-refresh every 30 min
+  document.addEventListener("visibilitychange", () => { if (!document.hidden && S.wxTime && Date.now() - S.wxTime > 15 * 60 * 1000) refreshWeather(false); });
+  Stats.pageview(); Stats.showTrips();
 }
 function refresh() { renderStats(); renderCards(); }
 init().catch(e => { console.error(e); $("#cards").innerHTML = `<p class="warnbox">Something went wrong loading BarfChalo. Please refresh.</p>`; });

@@ -29,6 +29,7 @@
   <div class="hero-in">
     <p class="kicker">❄ Free snow trip planner for India</p>
     <h1>Where is it <span class="grad">snowing</span> this week?</h1>
+    <p class="tripcount" id="tripCount" hidden></p>
     <p class="sub">Live snow forecast for 40+ places in Himachal, Uttarakhand, Kashmir &amp; Sikkim — with the real road route, fuel cost for <em>your</em> car, tolls and cost per person.</p>
 
     <form class="planner" id="planner" autocomplete="off" onsubmit="return false">
@@ -65,6 +66,7 @@
 </section>
 
 <section class="wrap" id="results">
+  <div class="liveline" id="liveline"></div>
   <div class="statbar" id="statbar"></div>
   <div class="toolbar">
     <div class="chips" id="stateChips"></div>
@@ -118,7 +120,7 @@
 <footer class="foot">
   <div class="foot-in">
     <div class="brand small"><img src="assets/logo.svg" alt="" width="26" height="26"><span>Barf<b>Chalo</b></span></div>
-    <p class="social"><span class="soon">📸 Instagram — coming soon</span><span class="soon">▶️ YouTube — coming soon</span></p>
+    <p class="social"><a class="soon" href="stats.html">📊 Live reach</a><span class="soon">📸 Instagram — coming soon</span><span class="soon">▶️ YouTube — coming soon</span></p>
     <p class="fine">Free to use. Snow: Open-Meteo (CC BY 4.0). Map data © OpenStreetMap contributors. Routing: OSRM demo server. Photos: Wikimedia Commons, credited on each photo. Mileage, fuel prices and tolls are approximate estimates — not quotes. Always check road status locally before you drive.</p>
   </div>
 </footer>
