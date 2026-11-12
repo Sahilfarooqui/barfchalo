@@ -292,6 +292,11 @@ function terrainFuel(rt, d) {
   return { oneWay: up, back: down, flat, plainKm, hillKm, ascent, maxEl };
 }
 let rMap;
+function fitRouteMap(m) { // re-measure the container (it may have been hidden/animating) and fit the route
+  if (!m || m !== rMap) return; const el = m.getContainer(); if (!el.offsetWidth || !el.offsetHeight) return;
+  m.invalidateSize({ animate: false });
+  if (m._fit) m.fitBounds(m._fit, { padding: [24, 24], animate: false });
+}
 async function openDetail(id, push = true) {
   const d = S.dests.find(x => x.id === id); if (!d) return;
   if (push) history.replaceState(null, "", shareURL(id));
@@ -324,9 +329,15 @@ async function openDetail(id, push = true) {
     <div class="dsec" style="padding-bottom:28px"><h3>📤 Share this trip</h3><div class="btns" id="shareBtns"></div></div>`;
   $("#sheet .sheet-card").scrollTop = 0;
   rMap && rMap.remove(); rMap = null;
-  if (window.L) { rMap = L.map("routeMap", { scrollWheelZoom: false, attributionControl: false }).setView([d.lat, d.lon], 9);
+  if (window.L) { rMap = L.map("routeMap", { scrollWheelZoom: false, attributionControl: false, zoomSnap: 0.25 }).setView([d.lat, d.lon], 9);
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: '&copy; OpenStreetMap contributors · Route: OSRM' }).addTo(rMap);
-    L.control.attribution({ prefix: '<a href="https://leafletjs.com">Leaflet</a>' }).addTo(rMap); L.marker([d.lat, d.lon]).addTo(rMap).bindPopup(esc(d.name)); setTimeout(() => rMap.invalidateSize(), 250); }
+    L.control.attribution({ prefix: '<a href="https://leafletjs.com">Leaflet</a>' }).addTo(rMap); L.marker([d.lat, d.lon]).addTo(rMap).bindPopup(esc(d.name));
+    rMap._fit = null; const m = rMap;
+    // The sheet has just been un-hidden and is animating: re-measure once it is laid out, then fit again.
+    requestAnimationFrame(() => requestAnimationFrame(() => fitRouteMap(m)));
+    [150, 400, 900].forEach(t => setTimeout(() => fitRouteMap(m), t));
+    $("#sheet .sheet-card").addEventListener("animationend", () => fitRouteMap(m), { once: true });
+    if (window.ResizeObserver) { const ro = new ResizeObserver(() => fitRouteMap(m)); ro.observe($("#routeMap")); m.on("unload", () => ro.disconnect()); } }
   renderShare(d, null);
   if (!S.from) return;
   try {
@@ -351,7 +362,7 @@ async function openDetail(id, push = true) {
       ${warn ? `<div class="warnbox">⚠️ ${warn}</div>` : ""}`;
     if (rMap) { const line = L.polyline(rt.coords.map(c => [c[1], c[0]]), { color: "#38bdf8", weight: 5, opacity: .9 }).addTo(rMap);
       L.circleMarker([S.from.lat, S.from.lon], { radius: 8, color: "#fff", fillColor: "#22c55e", fillOpacity: 1 }).addTo(rMap).bindPopup("Start: " + esc(S.from.name));
-      rMap.fitBounds(line.getBounds(), { padding: [20, 20] }); }
+      rMap._fit = line.getBounds(); fitRouteMap(rMap); const m = rMap; [200, 600].forEach(t => setTimeout(() => fitRouteMap(m), t)); }
     renderShare(d, { km: rt.km, hrs, total, per });
   } catch (e) {
     console.warn(e);
