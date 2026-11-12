@@ -141,3 +141,4 @@ h1{font-size:clamp(34px,6.5vw,64px);line-height:1.04;margin:0 0 14px;letter-spac
 @media(prefers-reduced-motion:reduce){#snowfx{display:none}*{animation:none!important;transition:none!important}}
 .gallery figure{aspect-ratio:auto;height:clamp(220px,42vw,380px)}
 @media(max-width:600px){.tiles{grid-template-columns:1fr 1fr}.tile.big{grid-column:1/-1}.tile b{font-size:21px}}
+@media(max-width:600px){.stat b{font-size:20px}.stat{padding:12px}}

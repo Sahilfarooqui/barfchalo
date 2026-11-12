@@ -64,11 +64,11 @@ function setFrom(f) {
   S.from = f; $("#from").value = f.name;
   if (!S.priceTouched) setDefaultPrice();
 }
-function combo(input, list, search, pick) {
+function combo(input, list, search, pick, wait = 250) {
   let items = [], act = -1, timer;
   const render = () => { list.innerHTML = items.map((it, i) => `<li role="option" data-i="${i}" class="${i === act ? "act" : ""}">${it.html}</li>`).join("");
     list.classList.toggle("open", items.length > 0); };
-  input.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(async () => { items = await search(input.value.trim()); act = -1; render(); }, 250); });
+  input.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(async () => { items = await search(input.value.trim()); act = -1; render(); }, wait); });
   input.addEventListener("focus", async () => { if (!input.dataset.typed) { items = await search(""); act = -1; render(); } });
   input.addEventListener("keydown", e => {
     if (e.key === "ArrowDown") { act = Math.min(items.length - 1, act + 1); render(); e.preventDefault(); }
@@ -82,11 +82,13 @@ function combo(input, list, search, pick) {
 async function placeSearch(q) {
   if (q.length < 2) return [];
   try {
-    const d = await getJSON(`https://photon.komoot.io/api/?q=${encodeURIComponent(q)}&limit=7&lang=en&bbox=68,6,97.5,37.2`, 8000);
-    return d.features.filter(f => f.properties.countrycode === "IN").map(f => {
+    const d = await getJSON(`https://photon.komoot.io/api/?q=${encodeURIComponent(q)}&limit=10&lang=en&bbox=68,6,97.5,37.2&layer=city&layer=locality&layer=district&layer=county&layer=state&layer=other`, 8000);
+    const seen = new Set();
+    return d.features.filter(f => { const p = f.properties, k = p.name + "|" + (p.state || "");
+      if (p.countrycode !== "IN" || seen.has(k)) return false; seen.add(k); return true; }).slice(0, 7).map(f => {
       const p = f.properties, sub = [p.district || p.county || p.city, p.state].filter(Boolean).filter((x, i, a) => a.indexOf(x) === i && x !== p.name).join(", ");
       return { html: `📍 <span>${esc(p.name)}</span><small>${esc(sub)}</small>`,
-               v: { name: p.name + (p.state && p.name !== p.state ? ", " + p.state : ""), lat: f.geometry.coordinates[1], lon: f.geometry.coordinates[0], state: normState(p.state) } };
+               v: { name: p.name + (p.state && p.name !== p.state ? ", " + p.state : ""), lat: f.geometry.coordinates[1], lon: f.geometry.coordinates[0], state: normState(p.state || (p.type === "state" ? p.name : null)) } };
     });
   } catch { return []; }
 }
@@ -159,7 +161,7 @@ function safety(d) {
     if (w.min3 <= -10) { score += 1; why.push(["Coldest night", `${Math.round(w.min3)}°C — black ice likely`]); }
     else why.push(["Coldest night", `${Math.round(w.min3)}°C${w.min3 < 0 ? " — icy mornings" : ""}`]);
   }
-  const lvl = score <= 2 ? 1 : score <= 3 ? 2 : 3;
+  const lvl = score <= 1 ? 1 : score <= 3 ? 2 : 3;
   return { lvl, label: ["", "Low risk", "Take care", "High risk"][lvl], why };
 }
 function score(d) { const w = S.wx[d.id] || { snow7: 0, depth: 0, snowDays7: 0 }, r = S.road[d.id];
@@ -210,9 +212,9 @@ function renderChips() {
 let ovMap, ovLayer;
 function renderOverview() {
   if (!window.L) return;
-  if (!ovMap) { ovMap = L.map("overview", { scrollWheelZoom: false }).setView([31, 78], 5);
+  if (!ovMap) { ovMap = L.map("overview", { scrollWheelZoom: false, attributionControl: false }).setView([31, 78], 5);
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(ovMap);
-    ovLayer = L.layerGroup().addTo(ovMap); }
+    ovLayer = L.layerGroup().addTo(ovMap); L.control.attribution({ prefix: '<a href="https://leafletjs.com">Leaflet</a>' }).addTo(ovMap); }
   ovLayer.clearLayers(); const pts = [];
   S.dests.forEach(d => { const w = S.wx[d.id], s7 = w ? w.snow7 : 0, col = s7 >= 15 ? "#0ea5e9" : s7 >= 3 ? "#8b5cf6" : "#64748b";
     pts.push([d.lat, d.lon]);
@@ -286,9 +288,9 @@ async function openDetail(id, push = true) {
     <div class="dsec" style="padding-bottom:28px"><h3>📤 Share this trip</h3><div class="btns" id="shareBtns"></div></div>`;
   $("#sheet .sheet-card").scrollTop = 0;
   rMap && rMap.remove(); rMap = null;
-  if (window.L) { rMap = L.map("routeMap", { scrollWheelZoom: false }).setView([d.lat, d.lon], 9);
+  if (window.L) { rMap = L.map("routeMap", { scrollWheelZoom: false, attributionControl: false }).setView([d.lat, d.lon], 9);
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18, attribution: '&copy; OpenStreetMap contributors · Route: OSRM' }).addTo(rMap);
-    L.marker([d.lat, d.lon]).addTo(rMap).bindPopup(esc(d.name)); setTimeout(() => rMap.invalidateSize(), 250); }
+    L.control.attribution({ prefix: '<a href="https://leafletjs.com">Leaflet</a>' }).addTo(rMap); L.marker([d.lat, d.lon]).addTo(rMap).bindPopup(esc(d.name)); setTimeout(() => rMap.invalidateSize(), 250); }
   renderShare(d, null);
   if (!S.from) return;
   try {
@@ -360,7 +362,7 @@ async function init() {
   if (h.mil) { S.mileage = +h.mil; S.milTouched = true; $("#mileage").value = S.mileage; }
   if (h.fp) { S.price = +h.fp; S.priceTouched = true; $("#price").value = S.price; $("#priceNote").textContent = "your price"; }
   combo($("#from"), $("#fromList"), placeSearch, v => { $("#from").dataset.typed = 1; setFrom(v); run(); });
-  combo($("#car"), $("#carList"), async q => carSearch(q.includes("·") ? "" : q), v => setCar(v) || refresh());
+  combo($("#car"), $("#carList"), async q => carSearch(q.includes("·") ? "" : q), v => setCar(v) || refresh(), 0);
   $("#car").addEventListener("focus", e => e.target.select());
   $("#locBtn").onclick = useMyLocation;
   $$(".stepper button").forEach(b => b.onclick = () => { S.pax = Math.max(1, Math.min(12, S.pax + +b.dataset.step)); $("#pax").textContent = S.pax; refresh(); });
