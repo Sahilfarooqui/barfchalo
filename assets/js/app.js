@@ -387,7 +387,9 @@ async function run() {
   $("#cards").innerHTML = '<div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div>';
   await Promise.all([S.wxPromise, loadRoad()]);
   renderLive(); renderStats(); renderCards(); renderOverview();
-  if (!$("#sheet").hidden) return; history.replaceState(null, "", shareURL(null));
+  if (!$("#sheet").hidden) return;
+  // Keep a destination id already in the hash (share links) so a refresh still opens that trip.
+  history.replaceState(null, "", shareURL(readHash().d || null));
 }
 function snowfx() {
   const c = $("#snowfx"), x = c.getContext("2d"); let W, H, F;
@@ -427,7 +429,7 @@ async function init() {
   document.addEventListener("click", e => { const o = e.target.closest("[data-open]"); if (o) openDetail(o.dataset.open); if (e.target.closest("[data-close]")) closeDetail(); });
   addEventListener("keydown", e => e.key === "Escape" && !$("#sheet").hidden && closeDetail());
   renderChips(); await run();
-  if (h.d) openDetail(h.d, false);
+  if (h.d) openDetail(h.d, true);
   setInterval(() => refreshWeather(false), 30 * 60 * 1000);   // live forecast auto-refresh every 30 min
   document.addEventListener("visibilitychange", () => { if (!document.hidden && S.wxTime && Date.now() - S.wxTime > 15 * 60 * 1000) refreshWeather(false); });
   Stats.pageview(); Stats.showTrips();
