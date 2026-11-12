@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BarfChalo — Find snow in India, plan the drive, split the cost</title>
+<meta name="description" content="Free snow trip planner for India. Live snow forecast for Himachal, Uttarakhand, Kashmir and Sikkim, real road routes on a map, fuel cost for your car, tolls and cost per person.">
+<meta name="theme-color" content="#0b1424">
+<meta property="og:title" content="BarfChalo — where is it snowing this week?">
+<meta property="og:description" content="Live snow forecast + road route + fuel cost for your car. Free, for anyone in India.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://sahilfarooqui.github.io/barfchalo/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./" aria-label="BarfChalo home"><img src="assets/logo.svg" alt="" width="34" height="34"><span>Barf<b>Chalo</b></span></a>
+  <nav class="nav"><a href="#plan">Plan</a><a href="#map">Snow map</a><a href="#tips">Safety</a><a href="#about">About</a></nav>
+</header>
+
+<section class="hero" id="plan">
+  <canvas id="snowfx" aria-hidden="true"></canvas>
+  <svg class="peaks" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true"><path d="M0 260 L0 170 L140 90 L230 150 L380 40 L520 160 L640 110 L760 190 L900 70 L1030 150 L1150 100 L1290 180 L1440 120 L1440 260Z" fill="#12213a"/><path d="M380 40 L420 75 L400 72 L380 90 L362 70 L345 78Z M900 70 L940 104 L915 100 L900 116 L884 98 L866 104Z" fill="#e9f3ff" opacity=".9"/><path d="M0 260 L0 210 L200 150 L330 210 L470 140 L610 220 L780 160 L930 220 L1080 170 L1240 230 L1440 180 L1440 260Z" fill="#0b1424"/></svg>
+  <div class="hero-in">
+    <p class="kicker">❄ Free snow trip planner for India</p>
+    <h1>Where is it <span class="grad">snowing</span> this week?</h1>
+    <p class="sub">Live snow forecast for 40+ places in Himachal, Uttarakhand, Kashmir &amp; Sikkim — with the real road route, fuel cost for <em>your</em> car, tolls and cost per person.</p>
+
+    <form class="planner" id="planner" autocomplete="off" onsubmit="return false">
+      <div class="field wide">
+        <label for="from">📍 Starting from</label>
+        <div class="row">
+          <input id="from" type="text" placeholder="Type your city or area…" aria-autocomplete="list" aria-controls="fromList">
+          <button type="button" class="ghost" id="locBtn" title="Use my location">🎯<span class="hide-s"> My location</span></button>
+        </div>
+        <ul class="dropdown" id="fromList" role="listbox"></ul>
+      </div>
+      <div class="field wide">
+        <label for="car">🚗 Your car</label>
+        <input id="car" type="text" placeholder="Search: Swift, Creta, Thar…" aria-controls="carList">
+        <ul class="dropdown" id="carList" role="listbox"></ul>
+      </div>
+      <div class="field">
+        <label>👥 People</label>
+        <div class="stepper"><button type="button" data-step="-1" aria-label="fewer">−</button><output id="pax">4</output><button type="button" data-step="1" aria-label="more">+</button></div>
+      </div>
+      <div class="field">
+        <label for="price" id="priceLbl">⛽ Fuel ₹/litre</label>
+        <input id="price" type="number" step="0.1" min="1" inputmode="decimal">
+        <small id="priceNote" class="note">approx · edit</small>
+      </div>
+      <div class="field">
+        <label for="mileage" id="milLbl">📏 Mileage (highway)</label>
+        <input id="mileage" type="number" step="0.1" min="1" inputmode="decimal">
+        <small id="milNote" class="note">approx real-world · edit</small>
+      </div>
+      <button type="button" class="cta" id="goBtn">Find snow trips ❄</button>
+    </form>
+  </div>
+</section>
+
+<section class="wrap" id="results">
+  <div class="statbar" id="statbar"></div>
+  <div class="toolbar">
+    <div class="chips" id="stateChips"></div>
+    <div class="tools">
+      <label class="toggle"><input type="checkbox" id="offbeat"> <span>Offbeat only</span></label>
+      <select id="sort" aria-label="Sort">
+        <option value="best">⭐ Best match</option><option value="snow">❄ Most snow</option>
+        <option value="near">📍 Nearest</option><option value="cheap">💸 Cheapest</option>
+      </select>
+    </div>
+  </div>
+  <div class="grid" id="cards"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
+</section>
+
+<section class="wrap" id="map">
+  <h2 class="h2">🗺️ Snow map <small>next 7 days, model forecast</small></h2>
+  <div id="overview" class="mapbox"></div>
+  <div class="legend"><span><i style="background:#7dd3fc"></i>Heavy snow (15 cm+)</span><span><i style="background:#a78bfa"></i>Some snow (3–15 cm)</span><span><i style="background:#94a3b8"></i>Little / none</span></div>
+</section>
+
+<section class="wrap promo">
+  <div class="sponsor">
+    <span class="tag">Sponsored space</span>
+    <h3>Run a homestay, café or car rental in the hills?</h3>
+    <p>Partner listings on BarfChalo are coming soon. No listing on this site is paid or reviewed yet.</p>
+  </div>
+</section>
+
+<section class="wrap" id="tips">
+  <h2 class="h2">🛡️ Drive safe in snow</h2>
+  <div class="tips">
+    <div class="tip"><b>⛓️</b><h4>Carry chains</h4><p>Most 2WD cars need snow chains after fresh snow. Police often allow only 4×4 or chains.</p></div>
+    <div class="tip"><b>🌙</b><h4>Check the night before</h4><p>Call your stay or check local traffic police pages. Roads close fast after heavy snow.</p></div>
+    <div class="tip"><b>⛽</b><h4>Fill up in the last big town</h4><p>Pumps are rare high up. Keep the tank above half. CNG and EV charging are scarce in the hills.</p></div>
+    <div class="tip"><b>🧊</b><h4>Watch for black ice</h4><p>Shaded bends freeze in the morning. Drive slow, low gear, no sudden braking.</p></div>
+    <div class="tip"><b>🌅</b><h4>Drive in daylight</h4><p>Reach your stay before dark. Mountain roads at night are the biggest risk.</p></div>
+    <div class="tip"><b>🎫</b><h4>Permits</h4><p>North Sikkim, Tsomgo, Zuluk and some border areas need permits. Self-drive may not be allowed.</p></div>
+  </div>
+</section>
+
+<section class="wrap about" id="about">
+  <h2 class="h2">ℹ️ How BarfChalo works</h2>
+  <div class="howto">
+    <div><b>❄</b><p><strong>Snow</strong> — live from the free <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> weather model at each place's real height. It is a forecast, not a guarantee.</p></div>
+    <div><b>🛣️</b><p><strong>Routes</strong> — real road routes from the public <a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a> router on <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> data.</p></div>
+    <div><b>⛰️</b><p><strong>Fuel</strong> — your car's approx real-world mileage, adjusted for climbs and descents using the road's height profile.</p></div>
+    <div><b>🧾</b><p><strong>Tolls &amp; prices</strong> — rough estimates, always marked “approx”. Check your FASTag SMS for the real amount.</p></div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot-in">
+    <div class="brand small"><img src="assets/logo.svg" alt="" width="26" height="26"><span>Barf<b>Chalo</b></span></div>
+    <p class="social"><span class="soon">📸 Instagram — coming soon</span><span class="soon">▶️ YouTube — coming soon</span></p>
+    <p class="fine">Free to use. Snow: Open-Meteo (CC BY 4.0). Map data © OpenStreetMap contributors. Routing: OSRM demo server. Photos: Wikimedia Commons, credited on each photo. Mileage, fuel prices and tolls are approximate estimates — not quotes. Always check road status locally before you drive.</p>
+  </div>
+</footer>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-bg" data-close></div>
+  <article class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="dName">
+    <button class="close" data-close aria-label="Close">✕</button>
+    <div id="detail"></div>
+  </article>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

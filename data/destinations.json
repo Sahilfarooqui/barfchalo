@@ -1,0 +1,1779 @@
+{
+ "generated": "2026-11-12",
+ "destinations": [
+  {
+   "id": "sissu",
+   "name": "Sissu / Atal Tunnel",
+   "area": "Lahaul",
+   "state": "Himachal Pradesh",
+   "lat": 32.46885,
+   "lon": 77.13233,
+   "elevation_m": 3010,
+   "risk": 3,
+   "offbeat": false,
+   "safety": "Atal Tunnel is usually kept open. After fresh snow, police sometimes let only 4×4 cars with chains go beyond Solang towards the Rohtang/Sissu side. Carry chains in a 2WD SUV and fill fuel in Manali. Check Manali traffic police the night before.",
+   "photos": [
+    {
+     "title": "Ghepan Lake, above Sissu, Himachal Pradesh, India",
+     "author": "UnpetitproleX",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Ghepan_Lake%2C_above_Sissu%2C_Himachal_Pradesh%2C_India.jpg/1280px-Ghepan_Lake%2C_above_Sissu%2C_Himachal_Pradesh%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AGhepan_Lake%2C_above_Sissu%2C_Himachal_Pradesh%2C_India.jpg"
+    },
+    {
+     "title": "Sissu Lake, Lahaul, Himachal Pradesh, India",
+     "author": "UnpetitproleX",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Sissu_Lake%2C_Lahaul%2C_Himachal_Pradesh%2C_India.jpg/1280px-Sissu_Lake%2C_Lahaul%2C_Himachal_Pradesh%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASissu_Lake%2C_Lahaul%2C_Himachal_Pradesh%2C_India.jpg"
+    },
+    {
+     "title": "Ghepan Goh Peak visible from Plm dhara waterfall, Sissu (Lahaul)",
+     "author": "Avantikac98",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Ghepan_Goh_Peak_visible_from_Plm_dhara_waterfall%2C_Sissu_%28Lahaul%29.jpg/1280px-Ghepan_Goh_Peak_visible_from_Plm_dhara_waterfall%2C_Sissu_%28Lahaul%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AGhepan_Goh_Peak_visible_from_Plm_dhara_waterfall%2C_Sissu_%28Lahaul%29.jpg"
+    },
+    {
+     "title": "Sissu Water Fall",
+     "author": "Lalitgupta isgec",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Sissu_Water_Fall.jpg/1280px-Sissu_Water_Fall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASissu_Water_Fall.jpg"
+    }
+   ],
+   "snow_months": "Typically November to March; some years it starts in late October."
+  },
+  {
+   "id": "solang",
+   "name": "Solang Valley",
+   "area": "near Manali",
+   "state": "Himachal Pradesh",
+   "lat": 32.3161,
+   "lon": 77.15656,
+   "elevation_m": 2452,
+   "risk": 2,
+   "offbeat": false,
+   "safety": "The Manali–Solang road is usually fine for a 2WD SUV when it is clear and ploughed. After fresh snow it can close or become chains-only. Weekends are very crowded. Do not drive onto ski slopes or packed-snow side tracks.",
+   "photos": [
+    {
+     "title": "Paragliders at Solang Valley, Manali",
+     "author": "Madhumita Das",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Paragliders_at_Solang_Valley%2C_Manali.jpg/1280px-Paragliders_at_Solang_Valley%2C_Manali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AParagliders_at_Solang_Valley%2C_Manali.jpg"
+    },
+    {
+     "title": "Solang Valley, India",
+     "author": "Vyacheslav Argenberg",
+     "license": "CC BY 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Solang_Valley%2C_India.jpg/1280px-Solang_Valley%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASolang_Valley%2C_India.jpg"
+    },
+    {
+     "title": "Solang Valley, Paragliding, India",
+     "author": "Vyacheslav Argenberg",
+     "license": "CC BY 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Solang_Valley%2C_Paragliding%2C_India.jpg/1280px-Solang_Valley%2C_Paragliding%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASolang_Valley%2C_Paragliding%2C_India.jpg"
+    }
+   ],
+   "snow_months": "Typically December to March."
+  },
+  {
+   "id": "narkanda",
+   "name": "Narkanda",
+   "area": "Shimla hills",
+   "state": "Himachal Pradesh",
+   "lat": 31.25475,
+   "lon": 77.46127,
+   "elevation_m": 2720,
+   "risk": 1,
+   "offbeat": false,
+   "safety": "The NH5 town road is usually kept open. The spur to Hatu Peak is steeper and ices over; a 2WD SUV may need chains after snow, or you can skip Hatu and stay in town. Fill fuel before the last climb.",
+   "photos": [
+    {
+     "title": "HATU PEAK 3400M",
+     "author": "Chirag85",
+     "license": "CC0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/HATU_PEAK_3400M.JPG/1280px-HATU_PEAK_3400M.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AHATU_PEAK_3400M.JPG"
+    },
+    {
+     "title": "Hatu Peak India1",
+     "author": "Gv3101992",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Hatu_Peak_India1.jpg/1280px-Hatu_Peak_India1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AHatu_Peak_India1.jpg"
+    },
+    {
+     "title": "Narkanda India1",
+     "author": "Gv3101992",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Narkanda_India1.jpg/1280px-Narkanda_India1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ANarkanda_India1.jpg"
+    },
+    {
+     "title": "Narkanda hatu peak himachal pradesh",
+     "author": "Kondephy",
+     "license": "CC BY-SA 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Narkanda_hatu_peak_himachal_pradesh.jpg/1280px-Narkanda_hatu_peak_himachal_pradesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ANarkanda_hatu_peak_himachal_pradesh.jpg"
+    }
+   ],
+   "snow_months": "Typically December to February. More reliable than Kufri, less than Kinnaur or Lahaul."
+  },
+  {
+   "id": "kufri",
+   "name": "Kufri",
+   "area": "above Shimla",
+   "state": "Himachal Pradesh",
+   "lat": 31.10066,
+   "lon": 77.26338,
+   "elevation_m": 2557,
+   "risk": 1,
+   "offbeat": false,
+   "safety": "Roads are busy and can be icy. A 2WD SUV is usually fine to the main market when the road is clear. Parking is tight. Do not follow ponies or crowd vehicles onto snow banks.",
+   "photos": [
+    {
+     "title": "Great Himalaya view from Kufri, Shimla",
+     "author": "Sharan.robinson",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Great_Himalaya_view_from_Kufri%2C_Shimla.jpg/1280px-Great_Himalaya_view_from_Kufri%2C_Shimla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AGreat_Himalaya_view_from_Kufri%2C_Shimla.jpg"
+    },
+    {
+     "title": "Green Valley on the way to Kufri, Shimla",
+     "author": "Raavimohantydelhi",
+     "license": "CC BY-SA 4.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/d/df/Green_Valley_on_the_way_to_Kufri%2C_Shimla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3AGreen_Valley_on_the_way_to_Kufri%2C_Shimla.jpg"
+    },
+    {
+     "title": "Kufri in Shimla 2",
+     "author": "Satyamrai7777",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Kufri_in_Shimla_2.jpg/1280px-Kufri_in_Shimla_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKufri_in_Shimla_2.jpg"
+    },
+    {
+     "title": "Kufri in Shimla 3",
+     "author": "Satyamrai7777",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Kufri_in_Shimla_3.jpg/1280px-Kufri_in_Shimla_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKufri_in_Shimla_3.jpg"
+    }
+   ],
+   "snow_months": "Typically December to February, but snow here is less reliable than at higher places on this list."
+  },
+  {
+   "id": "chitkul",
+   "name": "Chitkul",
+   "area": "Kinnaur",
+   "state": "Himachal Pradesh",
+   "lat": 31.35179,
+   "lon": 78.43591,
+   "elevation_m": 3445,
+   "risk": 3,
+   "offbeat": true,
+   "safety": "Long drive: NH5 into the Sangla valley road, which is narrow with drop-offs. Last reliable petrol is usually around Reckong Peo or Bhabanagar — fill up. After heavy snow the valley road can close. A 2WD SUV is commonly used when the road is clear and ploughed. Do not push through fresh unploughed snow. There is little help after Karcham at night.",
+   "photos": [
+    {
+     "title": "Baspa River, Chitkul, Himachal Pradesh",
+     "author": "Anamdas",
+     "license": "CC BY-SA 4.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Baspa_River%2C_Chitkul%2C_Himachal_Pradesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3ABaspa_River%2C_Chitkul%2C_Himachal_Pradesh.jpg"
+    },
+    {
+     "title": "Baspa River flowing next to Chitkul",
+     "author": "Sanyam Bahga",
+     "license": "CC BY-SA 3.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/3/32/Baspa_River_flowing_next_to_Chitkul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3ABaspa_River_flowing_next_to_Chitkul.jpg"
+    },
+    {
+     "title": "Baspa river flowing through Chitkul",
+     "author": "Sukanya Ray",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Baspa_river_flowing_through_Chitkul.jpg/1280px-Baspa_river_flowing_through_Chitkul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ABaspa_river_flowing_through_Chitkul.jpg"
+    },
+    {
+     "title": "Chitkul, Sangla Valley, Kinnaur District, Himachal Pradesh",
+     "author": "Manojkhurana",
+     "license": "CC BY-SA 3.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/5/59/Chitkul%2C_Sangla_Valley%2C_Kinnaur_District%2C_Himachal_Pradesh.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChitkul%2C_Sangla_Valley%2C_Kinnaur_District%2C_Himachal_Pradesh.JPG"
+    }
+   ],
+   "snow_months": "Typically November to March. The village is high, so it can get snow earlier than Sangla."
+  },
+  {
+   "id": "sangla",
+   "name": "Sangla",
+   "area": "Kinnaur",
+   "state": "Himachal Pradesh",
+   "lat": 31.42588,
+   "lon": 78.26373,
+   "elevation_m": 2648,
+   "risk": 2,
+   "offbeat": true,
+   "safety": "Same valley road as Chitkul, a little lower and busier. Fill petrol at Reckong Peo or Bhabanagar. A 2WD SUV is usually fine when the road is ploughed. Do not drive the last Chitkul stretch after a fresh, unploughed fall.",
+   "photos": [
+    {
+     "title": "A scenic view of Sangla valley Kamru fort forests in Himachal India 2015",
+     "author": "Ashish Gupta from Noida, India",
+     "license": "CC BY 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/A_scenic_view_of_Sangla_valley_Kamru_fort_forests_in_Himachal_India_2015.jpg/1280px-A_scenic_view_of_Sangla_valley_Kamru_fort_forests_in_Himachal_India_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AA_scenic_view_of_Sangla_valley_Kamru_fort_forests_in_Himachal_India_2015.jpg"
+    },
+    {
+     "title": "Baspa Valley at Sangla, Himachal Pradesh, India",
+     "author": "UnpetitproleX",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Baspa_Valley_at_Sangla%2C_Himachal_Pradesh%2C_India.jpg/1280px-Baspa_Valley_at_Sangla%2C_Himachal_Pradesh%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ABaspa_Valley_at_Sangla%2C_Himachal_Pradesh%2C_India.jpg"
+    },
+    {
+     "title": "Chitkul, Sangla Valley, Kinnaur District, Himachal Pradesh",
+     "author": "Manojkhurana",
+     "license": "CC BY-SA 3.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/5/59/Chitkul%2C_Sangla_Valley%2C_Kinnaur_District%2C_Himachal_Pradesh.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChitkul%2C_Sangla_Valley%2C_Kinnaur_District%2C_Himachal_Pradesh.JPG"
+    },
+    {
+     "title": "Road to Sangla Valley, Karchham, Sangla Valley, Kinnaur District, Himachal Pradesh",
+     "author": "Manojkhurana",
+     "license": "CC BY-SA 3.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/d/de/Road_to_Sangla_Valley%2C_Karchham%2C_Sangla_Valley%2C_Kinnaur_District%2C_Himachal_Pradesh.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3ARoad_to_Sangla_Valley%2C_Karchham%2C_Sangla_Valley%2C_Kinnaur_District%2C_Himachal_Pradesh.JPG"
+    }
+   ],
+   "snow_months": "Typically December to March."
+  },
+  {
+   "id": "kalpa",
+   "name": "Kalpa",
+   "area": "Kinnaur",
+   "state": "Himachal Pradesh",
+   "lat": 31.53316,
+   "lon": 78.24983,
+   "elevation_m": 2817,
+   "risk": 2,
+   "offbeat": true,
+   "safety": "Kalpa sits on a steep spur above Reckong Peo, off NH5. The village road can be icy. A 2WD SUV is usually fine when it is clear. Fill fuel in Reckong Peo. After heavy snow, walk the last icy lanes rather than forcing the car.",
+   "photos": [
+    {
+     "title": "Chini village and Kila (Kalpa), Kinnaur, Himachal Pradesh 02",
+     "author": "Amanpanta1990",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Chini_village_and_Kila_%28Kalpa%29%2C_Kinnaur%2C_Himachal_Pradesh_02.jpg/1280px-Chini_village_and_Kila_%28Kalpa%29%2C_Kinnaur%2C_Himachal_Pradesh_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChini_village_and_Kila_%28Kalpa%29%2C_Kinnaur%2C_Himachal_Pradesh_02.jpg"
+    },
+    {
+     "title": "Kalpa-14-Kinnaur Kailash-gje",
+     "author": "Gerd Eichmann",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Kalpa-14-Kinnaur_Kailash-gje.jpg/1280px-Kalpa-14-Kinnaur_Kailash-gje.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKalpa-14-Kinnaur_Kailash-gje.jpg"
+    },
+    {
+     "title": "Kalpa Village",
+     "author": "Sapna Sony",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Kalpa_Village.jpg/1280px-Kalpa_Village.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKalpa_Village.jpg"
+    },
+    {
+     "title": "Kalpa and Kailash",
+     "author": "Honinbou",
+     "license": "CC0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/0/03/Kalpa_and_Kailash.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKalpa_and_Kailash.jpg"
+    }
+   ],
+   "snow_months": "Typically December to March."
+  },
+  {
+   "id": "rakchham",
+   "name": "Rakchham",
+   "area": "Kinnaur",
+   "state": "Himachal Pradesh",
+   "lat": 31.39234,
+   "lon": 78.35375,
+   "elevation_m": 3132,
+   "risk": 3,
+   "offbeat": true,
+   "safety": "Sits on the Sangla–Chitkul road. Same fuel and closure advice as Chitkul. A quiet base if Chitkul rooms are full or the last stretch is in poor shape. 2WD is usually fine when the road is ploughed.",
+   "photos": [
+    {
+     "title": "Rakchham Village, Sangla Valley",
+     "author": "Manojkhurana",
+     "license": "CC BY-SA 3.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Rakchham_Village%2C_Sangla_Valley.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3ARakchham_Village%2C_Sangla_Valley.JPG"
+    },
+    {
+     "title": "Himalayan view from Rakchham village, Kinnaur, Himachal Pradesh, India- 2014-02-15 12-20.jpg",
+     "author": "User:Traveller arunava",
+     "license": "CC BY-SA 3.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Himalayan_view_from_Rakchham_village%2C_Kinnaur%2C_Himachal_Pradesh%2C_India-_2014-02-15_12-20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3AHimalayan_view_from_Rakchham_village%2C_Kinnaur%2C_Himachal_Pradesh%2C_India-_2014-02-15_12-20.jpg"
+    }
+   ],
+   "snow_months": "Typically November to March."
+  },
+  {
+   "id": "jalori_jibhi",
+   "name": "Jalori Pass / Jibhi",
+   "area": "Banjar",
+   "state": "Himachal Pradesh",
+   "lat": 31.59228,
+   "lon": 77.35262,
+   "elevation_m": 1783,
+   "risk": 2,
+   "offbeat": true,
+   "safety": "In winter, drive to Jibhi via Aut and Banjar. Do not plan to cross Jalori Pass after snowfall — it is often shut. A 2WD SUV is usually fine to Jibhi when the Banjar road is open. Carry chains only if you go up towards Shoja or the pass, and turn back if the road is not ploughed.",
+   "photos": [
+    {
+     "title": "Bridge at Jibhi Waterfall",
+     "author": "Rohan Pinto",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Bridge_at_Jibhi_Waterfall.jpg/1280px-Bridge_at_Jibhi_Waterfall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ABridge_at_Jibhi_Waterfall.jpg"
+    },
+    {
+     "title": "Jibhi, Banjar, Himachal Pradesh",
+     "author": "Imdgod",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Jibhi%2C_Banjar%2C_Himachal_Pradesh.png/1280px-Jibhi%2C_Banjar%2C_Himachal_Pradesh.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AJibhi%2C_Banjar%2C_Himachal_Pradesh.png"
+    },
+    {
+     "title": "Jibhi Bridge",
+     "author": "SaurabhSetia",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Jibhi_Bridge.jpg/1280px-Jibhi_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AJibhi_Bridge.jpg"
+    },
+    {
+     "title": "Jibhi Waterfall, Jibhi, Himachal Pradesh",
+     "author": "Rohan Pinto",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Jibhi_Waterfall%2C_Jibhi%2C_Himachal_Pradesh.jpg/1280px-Jibhi_Waterfall%2C_Jibhi%2C_Himachal_Pradesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AJibhi_Waterfall%2C_Jibhi%2C_Himachal_Pradesh.jpg"
+    }
+   ],
+   "snow_months": "The pass (about 3,140 m) often holds snow from December to March and is often closed then. Jibhi village is much lower (about 1,780 m) and gets less snow."
+  },
+  {
+   "id": "chanshal",
+   "name": "Chanshal / Dodra Kwar",
+   "area": "Rohru",
+   "state": "Himachal Pradesh",
+   "lat": 31.1971,
+   "lon": 77.9887,
+   "elevation_m": 3760,
+   "risk": 3,
+   "offbeat": true,
+   "safety": "This is the highest road on the list. A 2WD SUV should not attempt Chanshal Pass with fresh or packed snow. Go only when Rohru locals and the local administration say the pass is open and ploughed or dry. There is almost no recovery once you are on the top. Dodra Kwar is a further 36 km after the pass.",
+   "photos": [
+    {
+     "title": "Chanshal Pass Image",
+     "author": "Psushant577",
+     "license": "CC BY-SA 4.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/8/88/Chanshal_Pass_Image.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChanshal_Pass_Image.jpg"
+    },
+    {
+     "title": "Chanshal pass",
+     "author": "Prithvijeet Singh Thakur",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Chanshal_pass.jpg/1280px-Chanshal_pass.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChanshal_pass.jpg"
+    },
+    {
+     "title": "Chanshal pass 1",
+     "author": "Prithvijeet Singh Thakur",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Chanshal_pass_1.jpg/1280px-Chanshal_pass_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChanshal_pass_1.jpg"
+    },
+    {
+     "title": "Chanshal peak",
+     "author": "Prithvijeet Singh Thakur",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Chanshal_peak.jpg/1280px-Chanshal_peak.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChanshal_peak.jpg"
+    }
+   ],
+   "snow_months": "The pass (about 3,760 m) can hold snow from November into spring, and is often closed for a long mid-winter stretch. Dodra Kwar, beyond the pass, can be cut off."
+  },
+  {
+   "id": "auli",
+   "name": "Auli",
+   "area": "Joshimath",
+   "state": "Uttarakhand",
+   "lat": 30.53779,
+   "lon": 79.56572,
+   "elevation_m": 2652,
+   "risk": 2,
+   "offbeat": false,
+   "safety": "Drive to Joshimath, then either the Auli road or the ropeway. After snow, the Auli road may need chains or may close; the ropeway is the safer way up if it is running. Check the Joshimath road status the night before. Fill fuel in Joshimath. A 2WD SUV is usually fine to Joshimath when that highway is open.",
+   "photos": [
+    {
+     "title": "Auli-slopes",
+     "author": "User: (WT-shared) Karan44 at  wts wikivoyage",
+     "license": "Public domain",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Auli-slopes.jpg/1280px-Auli-slopes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AAuli-slopes.jpg"
+    },
+    {
+     "title": "Auli Uttarakhand",
+     "author": "Seema Sati",
+     "license": "CC BY-SA 4.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/4/40/Auli_Uttarakhand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3AAuli_Uttarakhand.jpg"
+    },
+    {
+     "title": "Auli cable car",
+     "author": "Mandeep Thander",
+     "license": "CC BY-SA 2.5",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Auli_cable_car.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3AAuli_cable_car.jpg"
+    },
+    {
+     "title": "Auli hill station",
+     "author": "Mandeep Thander",
+     "license": "CC BY-SA 2.5",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/6/69/Auli_hill_station.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3AAuli_hill_station.jpg"
+    }
+   ],
+   "snow_months": "Typically December to March (it is a ski meadow)."
+  },
+  {
+   "id": "harsil",
+   "name": "Harsil",
+   "area": "Uttarkashi",
+   "state": "Uttarakhand",
+   "lat": 31.03691,
+   "lon": 78.75065,
+   "elevation_m": 2496,
+   "risk": 2,
+   "offbeat": true,
+   "safety": "Beyond Uttarkashi on the Gangotri road, along the Bhagirathi river. The road can close after heavy snow or landslides. A 2WD SUV is usually fine when the road is open and ploughed. Fill fuel in Uttarkashi. There may be checkpoints.  the valley and riverside villages, not a temple run.",
+   "photos": [
+    {
+     "title": "Harsil Valley, Uttarkashi, Uttarakhand",
+     "author": "Harshit SR",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Harsil_Valley%2C_Uttarkashi%2C_Uttarakhand.jpg/1280px-Harsil_Valley%2C_Uttarkashi%2C_Uttarakhand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AHarsil_Valley%2C_Uttarkashi%2C_Uttarakhand.jpg"
+    },
+    {
+     "title": "Harsil Valley",
+     "author": "Harshit SR",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Harsil_Valley.jpg/1280px-Harsil_Valley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AHarsil_Valley.jpg"
+    },
+    {
+     "title": "A traditional house at Harsil",
+     "author": "Arnab Chaudhary",
+     "license": "CC BY-SA 4.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/c/c6/A_traditional_house_at_Harsil.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3AA_traditional_house_at_Harsil.png"
+    },
+    {
+     "title": "Ganga river at Harshil",
+     "author": "Rathoredigvijay",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Ganga_river_at_Harshil.jpg/1280px-Ganga_river_at_Harshil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AGanga_river_at_Harshil.jpg"
+    }
+   ],
+   "snow_months": "Typically December to March."
+  },
+  {
+   "id": "chakrata",
+   "name": "Chakrata",
+   "area": "Jaunsar",
+   "state": "Uttarakhand",
+   "lat": 30.70132,
+   "lon": 77.87034,
+   "elevation_m": 2130,
+   "risk": 1,
+   "offbeat": true,
+   "safety": "Forest roads can be narrow and foggy. A 2WD SUV is usually fine in clear weather. After a rare snow, roads ice over. The Tiger Falls spur is a side road — go in daylight. Fill fuel in Dehradun or Vikasnagar.",
+   "photos": [
+    {
+     "title": "Chakrata - panoramio",
+     "author": "JediPro",
+     "license": "CC BY-SA 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Chakrata_-_panoramio.jpg/1280px-Chakrata_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChakrata_-_panoramio.jpg"
+    },
+    {
+     "title": "Chakrata nice wather",
+     "author": "Mustkeem Ahamad",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Chakrata_nice_wather.jpg/1280px-Chakrata_nice_wather.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChakrata_nice_wather.jpg"
+    },
+    {
+     "title": "Deoban",
+     "author": "Puneetcps",
+     "license": "CC BY-SA 4.0",
+     "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Deoban.jpg?width=1200",
+     "page": "https://commons.wikimedia.org/wiki/File:Deoban.jpg"
+    },
+    {
+     "title": "Chakrata small",
+     "author": "\"Nipun Sohanlal\"",
+     "license": "CC BY-SA 3.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Chakrata_small.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChakrata_small.JPG"
+    }
+   ],
+   "snow_months": "Typically December to February, and not every year — it is the lowest ‘snow’ town on the main list, so treat snow as a bonus, not a promise."
+  },
+  {
+   "id": "manali",
+   "name": "Manali",
+   "area": "Kullu valley",
+   "state": "Himachal Pradesh",
+   "lat": 32.24546,
+   "lon": 77.18729,
+   "coord_src": "nominatim",
+   "risk": 1,
+   "offbeat": false,
+   "safety": "Main town road stays open most of winter. Old Manali and hotel lanes get icy after snow. Traffic jams are common on weekends near the Mall and towards Solang.",
+   "photos": [
+    {
+     "title": "Yaks on Manali, Himachal Pradesh.jpg",
+     "author": "Shameer Thajudeen",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Yaks_on_Manali%2C_Himachal_Pradesh.jpg/960px-Yaks_on_Manali%2C_Himachal_Pradesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AYaks_on_Manali%2C_Himachal_Pradesh.jpg"
+    },
+    {
+     "title": "Snow Rohtang Range Manali May24 A7CR 00128.jpg",
+     "author": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but p",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Snow_Rohtang_Range_Manali_May24_A7CR_00128.jpg/960px-Snow_Rohtang_Range_Manali_May24_A7CR_00128.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASnow_Rohtang_Range_Manali_May24_A7CR_00128.jpg"
+    },
+    {
+     "title": "Manali Himachal India (16).JPG",
+     "author": "Shahnoor Habib Munmun",
+     "license": "CC BY 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Manali_Himachal_India_%2816%29.JPG/960px-Manali_Himachal_India_%2816%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AManali_Himachal_India_%2816%29.JPG"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 1905
+  },
+  {
+   "id": "sethan",
+   "name": "Sethan",
+   "area": "above Manali",
+   "state": "Himachal Pradesh",
+   "lat": 32.23603,
+   "lon": 77.2228,
+   "coord_src": "nominatim",
+   "risk": 2,
+   "offbeat": true,
+   "safety": "Small village above Prini on a narrow, steep road. After snow the last stretch is often walk-only. Leave the car lower if locals advise it.",
+   "photos": [
+    {
+     "title": "Sethan.jpg",
+     "author": "Catherine Lunaa",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Sethan.jpg/960px-Sethan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASethan.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2719
+  },
+  {
+   "id": "shimla",
+   "name": "Shimla",
+   "area": "Shimla hills",
+   "state": "Himachal Pradesh",
+   "lat": 31.10404,
+   "lon": 77.17079,
+   "coord_src": "nominatim",
+   "risk": 1,
+   "offbeat": false,
+   "safety": "Snow comes only a few times a winter. Roads ice over in the morning and parking is tight. Use town parking and walk the Mall.",
+   "photos": [
+    {
+     "title": "Longwood (Shimla).jpg",
+     "author": "UnpetitproleX",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Longwood_%28Shimla%29.jpg/960px-Longwood_%28Shimla%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ALongwood_%28Shimla%29.jpg"
+    },
+    {
+     "title": "Shimla snow.jpg",
+     "author": "Smitanarang at English Wikipedia",
+     "license": "Public domain",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Shimla_snow.jpg/960px-Shimla_snow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AShimla_snow.jpg"
+    },
+    {
+     "title": "Shimla during snow.jpg",
+     "author": "UnpetitproleX",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Shimla_during_snow.jpg/960px-Shimla_during_snow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AShimla_during_snow.jpg"
+    },
+    {
+     "title": "A view from Shimlas upper ridge looking north to the snow-capped Himalaya.jpg",
+     "author": "Liz Highleyman from San Francisco, USA",
+     "license": "CC BY 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/A_view_from_Shimlas_upper_ridge_looking_north_to_the_snow-capped_Himalaya.jpg/960px-A_view_from_Shimlas_upper_ridge_looking_north_to_the_snow-capped_Himalaya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AA_view_from_Shimlas_upper_ridge_looking_north_to_the_snow-capped_Himalaya.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2119
+  },
+  {
+   "id": "dalhousie",
+   "name": "Dalhousie",
+   "area": "Chamba hills",
+   "state": "Himachal Pradesh",
+   "lat": 32.54358,
+   "lon": 75.94484,
+   "coord_src": "nominatim",
+   "risk": 1,
+   "offbeat": false,
+   "safety": "Hill roads from Banikhet are usually open. Snow days make the inner roads icy; drive slowly and avoid shaded bends early morning.",
+   "photos": [
+    {
+     "title": "Dalhousie mountain view.jpg",
+     "author": "Tejamamidiphotography",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Dalhousie_mountain_view.jpg/960px-Dalhousie_mountain_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ADalhousie_mountain_view.jpg"
+    },
+    {
+     "title": "Dalhousie view.jpg",
+     "author": "Sabyk2001",
+     "license": "CC BY-SA 3.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/2/21/Dalhousie_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3ADalhousie_view.jpg"
+    },
+    {
+     "title": "Dalhousie in Winter.JPG",
+     "author": "Amareshwara Sainadh",
+     "license": "CC BY-SA 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Dalhousie_in_Winter.JPG/960px-Dalhousie_in_Winter.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ADalhousie_in_Winter.JPG"
+    },
+    {
+     "title": "Khajiyar , Dalhousie ,hp.jpg",
+     "author": "Bittudubeyji",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Khajiyar_%2C_Dalhousie_%2Chp.jpg/960px-Khajiyar_%2C_Dalhousie_%2Chp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKhajiyar_%2C_Dalhousie_%2Chp.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 1583
+  },
+  {
+   "id": "khajjiar",
+   "name": "Khajjiar",
+   "area": "near Dalhousie",
+   "state": "Himachal Pradesh",
+   "lat": 32.54857,
+   "lon": 76.05972,
+   "coord_src": "nominatim",
+   "risk": 2,
+   "offbeat": false,
+   "safety": "The Dalhousie–Khajjiar road runs through forest and can close or turn icy after a heavy fall. Go mid-day and check with Dalhousie locals.",
+   "photos": [
+    {
+     "title": "A view of Khajjiar ,Chamba,Himachal Pradesh.jpg",
+     "author": "Harvinder Chandigarh",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/A_view_of_Khajjiar_%2CChamba%2CHimachal_Pradesh.jpg/960px-A_view_of_Khajjiar_%2CChamba%2CHimachal_Pradesh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AA_view_of_Khajjiar_%2CChamba%2CHimachal_Pradesh.jpg"
+    },
+    {
+     "title": "Khajjiar view.jpg",
+     "author": "Divyang.pandya",
+     "license": "CC BY-SA 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Khajjiar_view.jpg/960px-Khajjiar_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKhajjiar_view.jpg"
+    },
+    {
+     "title": "Khajjiar during august.jpg",
+     "author": "Amit.pratap1988",
+     "license": "CC BY-SA 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Khajjiar_during_august.jpg/960px-Khajjiar_during_august.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKhajjiar_during_august.jpg"
+    },
+    {
+     "title": "Khajjiar.jpg",
+     "author": "SriniG",
+     "license": "CC BY-SA 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Khajjiar.jpg/960px-Khajjiar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKhajjiar.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 1993
+  },
+  {
+   "id": "mcleodganj",
+   "name": "McLeod Ganj",
+   "area": "Dharamshala",
+   "state": "Himachal Pradesh",
+   "lat": 32.23527,
+   "lon": 76.32624,
+   "coord_src": "nominatim",
+   "risk": 1,
+   "offbeat": false,
+   "safety": "Town itself rarely gets heavy snow; snow is usually up at Triund (trek). Roads are steep and narrow with heavy traffic.",
+   "photos": [
+    {
+     "title": "Dharamshala, Himachal Pradesh DSC07336.jpg",
+     "author": "Manoj Karingamadathil",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Dharamshala%2C_Himachal_Pradesh_DSC07336.jpg/960px-Dharamshala%2C_Himachal_Pradesh_DSC07336.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ADharamshala%2C_Himachal_Pradesh_DSC07336.jpg"
+    },
+    {
+     "title": "View over McLeod Ganj - Himachal Pradesh - India (26538939370).jpg",
+     "author": "Adam Jones from Kelowna, BC, Canada",
+     "license": "CC BY-SA 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/View_over_McLeod_Ganj_-_Himachal_Pradesh_-_India_%2826538939370%29.jpg/960px-View_over_McLeod_Ganj_-_Himachal_Pradesh_-_India_%2826538939370%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AView_over_McLeod_Ganj_-_Himachal_Pradesh_-_India_%2826538939370%29.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 1738
+  },
+  {
+   "id": "shoja",
+   "name": "Shoja",
+   "area": "Jalori side, Banjar",
+   "state": "Himachal Pradesh",
+   "lat": 31.56448,
+   "lon": 77.37124,
+   "coord_src": "nominatim",
+   "risk": 2,
+   "offbeat": true,
+   "safety": "Above Jibhi on the Jalori road. Steep and narrow; after snow it is often chains-only or closed above Shoja. Do not attempt Jalori Pass after fresh snow.",
+   "photos": [
+    {
+     "title": "A view of the Himalayas at Jalori pass Himachal Pradesh India.jpg",
+     "author": "Sankara Subramanian from Bangalore, India",
+     "license": "CC BY 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/A_view_of_the_Himalayas_at_Jalori_pass_Himachal_Pradesh_India.jpg/960px-A_view_of_the_Himalayas_at_Jalori_pass_Himachal_Pradesh_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AA_view_of_the_Himalayas_at_Jalori_pass_Himachal_Pradesh_India.jpg"
+    },
+    {
+     "title": "Jalori Pass.jpg",
+     "author": "Manish57335",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Jalori_Pass.jpg/960px-Jalori_Pass.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AJalori_Pass.jpg"
+    },
+    {
+     "title": "Camping at Jalori pass.jpg",
+     "author": "Manish57335",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Camping_at_Jalori_pass.jpg/960px-Camping_at_Jalori_pass.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ACamping_at_Jalori_pass.jpg"
+    },
+    {
+     "title": "Himalayan range from Jalori Pass.jpg",
+     "author": "Prabhmeet Singh",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Himalayan_range_from_Jalori_Pass.jpg/960px-Himalayan_range_from_Jalori_Pass.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AHimalayan_range_from_Jalori_Pass.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2522
+  },
+  {
+   "id": "keylong",
+   "name": "Keylong",
+   "area": "Lahaul",
+   "state": "Himachal Pradesh",
+   "lat": 32.57179,
+   "lon": 77.02815,
+   "coord_src": "nominatim",
+   "risk": 3,
+   "offbeat": true,
+   "safety": "Reached through Atal Tunnel. In deep winter, roads beyond Sissu may be restricted after snowfall; police often allow only 4x4 with chains. Check Lahaul police updates.",
+   "photos": [
+    {
+     "title": "Keylong West Lahaul Himachal Oct22 A7C 03375 panorama.jpg",
+     "author": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but p",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Keylong_West_Lahaul_Himachal_Oct22_A7C_03375_panorama.jpg/960px-Keylong_West_Lahaul_Himachal_Oct22_A7C_03375_panorama.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKeylong_West_Lahaul_Himachal_Oct22_A7C_03375_panorama.jpg"
+    },
+    {
+     "title": "East Keylong Lahaul Himachal Oct22 A7C 04661.jpg",
+     "author": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but p",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/East_Keylong_Lahaul_Himachal_Oct22_A7C_04661.jpg/960px-East_Keylong_Lahaul_Himachal_Oct22_A7C_04661.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AEast_Keylong_Lahaul_Himachal_Oct22_A7C_04661.jpg"
+    },
+    {
+     "title": "Keylong West Lahaul Himachal Oct22 A7C 03375.jpg",
+     "author": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but p",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Keylong_West_Lahaul_Himachal_Oct22_A7C_03375.jpg/960px-Keylong_West_Lahaul_Himachal_Oct22_A7C_03375.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKeylong_West_Lahaul_Himachal_Oct22_A7C_03375.jpg"
+    },
+    {
+     "title": "Kardang West Lahaul Himachal Oct22 A7C 03376.jpg",
+     "author": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but p",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Kardang_West_Lahaul_Himachal_Oct22_A7C_03376.jpg/960px-Kardang_West_Lahaul_Himachal_Oct22_A7C_03376.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKardang_West_Lahaul_Himachal_Oct22_A7C_03376.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 3124
+  },
+  {
+   "id": "kaza",
+   "name": "Kaza (Spiti)",
+   "area": "Spiti valley",
+   "state": "Himachal Pradesh",
+   "lat": 32.22438,
+   "lon": 78.07226,
+   "coord_src": "nominatim",
+   "risk": 3,
+   "offbeat": true,
+   "safety": "In winter Spiti is reached only via Shimla–Kinnaur (Kunzum route is closed). Very cold, remote, landslide and black-ice prone. Experienced drivers only; carry chains and extra fuel.",
+   "photos": [
+    {
+     "title": "NH505 Spiti Kaza Losar Jun18 D72 7797.jpg",
+     "author": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but p",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/NH505_Spiti_Kaza_Losar_Jun18_D72_7797.jpg/960px-NH505_Spiti_Kaza_Losar_Jun18_D72_7797.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ANH505_Spiti_Kaza_Losar_Jun18_D72_7797.jpg"
+    },
+    {
+     "title": "Spiti River Kaza Himachal Jun18 D72 7232.jpg",
+     "author": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but p",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Spiti_River_Kaza_Himachal_Jun18_D72_7232.jpg/960px-Spiti_River_Kaza_Himachal_Jun18_D72_7232.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASpiti_River_Kaza_Himachal_Jun18_D72_7232.jpg"
+    },
+    {
+     "title": "NH505 Spiti Kaza Losar Jun18 D72 7800.jpg",
+     "author": "Timothy Gonsalves",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/NH505_Spiti_Kaza_Losar_Jun18_D72_7800.jpg/960px-NH505_Spiti_Kaza_Losar_Jun18_D72_7800.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ANH505_Spiti_Kaza_Losar_Jun18_D72_7800.jpg"
+    },
+    {
+     "title": "Spiti Gorge Kaza Losar Jun18 D72 7818.jpg",
+     "author": "Timothy A. Gonsalves",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Spiti_Gorge_Kaza_Losar_Jun18_D72_7818.jpg/960px-Spiti_Gorge_Kaza_Losar_Jun18_D72_7818.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASpiti_Gorge_Kaza_Losar_Jun18_D72_7818.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 3637
+  },
+  {
+   "id": "chopta",
+   "name": "Chopta",
+   "area": "Rudraprayag",
+   "state": "Uttarakhand",
+   "lat": 30.4849,
+   "lon": 79.2,
+   "coord_src": "nominatim",
+   "risk": 2,
+   "offbeat": false,
+   "safety": "After heavy snow the road from Ukhimath/Duggalbitta to Chopta often closes and you may need to walk. Fill fuel in Ukhimath or earlier.",
+   "photos": [
+    {
+     "title": "Chopta Valley.jpg",
+     "author": "Anindita Bhadra",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Chopta_Valley.jpg/960px-Chopta_Valley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChopta_Valley.jpg"
+    },
+    {
+     "title": "Chopta, starting point for treks to Tungnath and Chandrashila.jpg",
+     "author": "Alok",
+     "license": "CC BY-SA 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Chopta%2C_starting_point_for_treks_to_Tungnath_and_Chandrashila.jpg/960px-Chopta%2C_starting_point_for_treks_to_Tungnath_and_Chandrashila.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChopta%2C_starting_point_for_treks_to_Tungnath_and_Chandrashila.jpg"
+    },
+    {
+     "title": "Chopta, Uttarakhand.jpg",
+     "author": "dirk.hartung",
+     "license": "CC BY-SA 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Chopta%2C_Uttarakhand.jpg/960px-Chopta%2C_Uttarakhand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChopta%2C_Uttarakhand.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2870
+  },
+  {
+   "id": "munsiyari",
+   "name": "Munsiyari",
+   "area": "Pithoragarh",
+   "state": "Uttarakhand",
+   "lat": 30.12249,
+   "lon": 80.24153,
+   "coord_src": "nominatim",
+   "risk": 2,
+   "offbeat": true,
+   "safety": "Very long mountain drive via Thal or Birthi. Kalamuni top can get snow and close briefly. Drive in daylight only.",
+   "photos": [
+    {
+     "title": "Panchchuli Peaks, near Munsiyari, Uttarakhand.jpg",
+     "author": "https://www.flickr.com/photos/73109955@N00/",
+     "license": "CC BY 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Panchchuli_Peaks%2C_near_Munsiyari%2C_Uttarakhand.jpg/960px-Panchchuli_Peaks%2C_near_Munsiyari%2C_Uttarakhand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3APanchchuli_Peaks%2C_near_Munsiyari%2C_Uttarakhand.jpg"
+    },
+    {
+     "title": "Panchachuli peaks view from \"Thamri Kund\".JPG",
+     "author": "Pranavspn",
+     "license": "CC BY-SA 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Panchachuli_peaks_view_from_%22Thamri_Kund%22.JPG/960px-Panchachuli_peaks_view_from_%22Thamri_Kund%22.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3APanchachuli_peaks_view_from_%22Thamri_Kund%22.JPG"
+    },
+    {
+     "title": "Panchachuli peaks.jpg",
+     "author": "Arjunhaarith16",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Panchachuli_peaks.jpg/960px-Panchachuli_peaks.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3APanchachuli_peaks.jpg"
+    },
+    {
+     "title": "Munsiyari.jpg",
+     "author": "Ebenezer Rao",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Munsiyari.jpg/960px-Munsiyari.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AMunsiyari.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 1818
+  },
+  {
+   "id": "dhanaulti",
+   "name": "Dhanaulti",
+   "area": "near Mussoorie",
+   "state": "Uttarakhand",
+   "lat": 30.45829,
+   "lon": 78.20838,
+   "coord_src": "nominatim",
+   "risk": 1,
+   "offbeat": false,
+   "safety": "Short drive from Mussoorie. Gets busy and jams on snow days. Roads ice up in shaded forest stretches.",
+   "photos": [
+    {
+     "title": "Pine forest at Dhanaulti,Uttarakhand 1.jpg",
+     "author": "SHUVADIP",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Pine_forest_at_Dhanaulti%2CUttarakhand_1.jpg/960px-Pine_forest_at_Dhanaulti%2CUttarakhand_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3APine_forest_at_Dhanaulti%2CUttarakhand_1.jpg"
+    },
+    {
+     "title": "Pine forest at Dhanaulti Uttarakhand.jpg",
+     "author": "SHUVADIP",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Pine_forest_at_Dhanaulti_Uttarakhand.jpg/960px-Pine_forest_at_Dhanaulti_Uttarakhand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3APine_forest_at_Dhanaulti_Uttarakhand.jpg"
+    },
+    {
+     "title": "Terrace fields near Dhanaulti, Uttarakhand.jpg",
+     "author": "Kiran Jonnalagadda from Bangalore, India",
+     "license": "CC BY-SA 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Terrace_fields_near_Dhanaulti%2C_Uttarakhand.jpg/960px-Terrace_fields_near_Dhanaulti%2C_Uttarakhand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ATerrace_fields_near_Dhanaulti%2C_Uttarakhand.jpg"
+    },
+    {
+     "title": "View of Dhanaulti, Uttarakhand.jpg",
+     "author": "https://www.flickr.com/photos/ramkrsna/",
+     "license": "CC BY 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/View_of_Dhanaulti%2C_Uttarakhand.jpg/960px-View_of_Dhanaulti%2C_Uttarakhand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AView_of_Dhanaulti%2C_Uttarakhand.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2063
+  },
+  {
+   "id": "mussoorie",
+   "name": "Mussoorie",
+   "area": "Dehradun hills",
+   "state": "Uttarakhand",
+   "lat": 30.4569,
+   "lon": 78.07829,
+   "coord_src": "nominatim",
+   "risk": 1,
+   "offbeat": false,
+   "safety": "Snow is occasional. Massive weekend traffic; park and walk. Morning ice on the Kempty and Landour roads.",
+   "photos": [
+    {
+     "title": "Snow in Mussoorie (14828148471).jpg",
+     "author": "Paul Hamilton",
+     "license": "CC BY-SA 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Snow_in_Mussoorie_%2814828148471%29.jpg/960px-Snow_in_Mussoorie_%2814828148471%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASnow_in_Mussoorie_%2814828148471%29.jpg"
+    },
+    {
+     "title": "Snow in Mussoorie (14828149441).jpg",
+     "author": "Paul Hamilton",
+     "license": "CC BY-SA 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Snow_in_Mussoorie_%2814828149441%29.jpg/960px-Snow_in_Mussoorie_%2814828149441%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASnow_in_Mussoorie_%2814828149441%29.jpg"
+    },
+    {
+     "title": "Snow in Mussoorie (14644697847).jpg",
+     "author": "Paul Hamilton",
+     "license": "CC BY-SA 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Snow_in_Mussoorie_%2814644697847%29.jpg/960px-Snow_in_Mussoorie_%2814644697847%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASnow_in_Mussoorie_%2814644697847%29.jpg"
+    },
+    {
+     "title": "Snow in Mussoorie (14644747567).jpg",
+     "author": "Paul Hamilton",
+     "license": "CC BY-SA 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Snow_in_Mussoorie_%2814644747567%29.jpg/960px-Snow_in_Mussoorie_%2814644747567%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASnow_in_Mussoorie_%2814644747567%29.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2013
+  },
+  {
+   "id": "sankri",
+   "name": "Sankri",
+   "area": "Kedarkantha base",
+   "state": "Uttarakhand",
+   "lat": 31.07802,
+   "lon": 78.18411,
+   "coord_src": "nominatim",
+   "risk": 2,
+   "offbeat": true,
+   "safety": "Base village for the Kedarkantha trek. Narrow road beyond Mori/Naitwar; after heavy snow vehicles may stop below Sankri.",
+   "photos": [
+    {
+     "title": "Kedarkantha Peak.jpg",
+     "author": "Kanthi Kiran",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Kedarkantha_Peak.jpg/960px-Kedarkantha_Peak.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKedarkantha_Peak.jpg"
+    },
+    {
+     "title": "Kedarkantha Trek.jpg",
+     "author": "Princerawat1243",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Kedarkantha_Trek.jpg/960px-Kedarkantha_Trek.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKedarkantha_Trek.jpg"
+    },
+    {
+     "title": "Kedarkantha camps in heaven.jpg",
+     "author": "AmxxmA",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Kedarkantha_camps_in_heaven.jpg/960px-Kedarkantha_camps_in_heaven.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKedarkantha_camps_in_heaven.jpg"
+    },
+    {
+     "title": "Summit of Kedarkantha.jpg",
+     "author": "Lawanoopyadav",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Summit_of_Kedarkantha.jpg/960px-Summit_of_Kedarkantha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASummit_of_Kedarkantha.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 1899
+  },
+  {
+   "id": "raithal",
+   "name": "Raithal",
+   "area": "Dayara Bugyal base",
+   "state": "Uttarakhand",
+   "lat": 30.81672,
+   "lon": 78.60379,
+   "coord_src": "nominatim",
+   "risk": 2,
+   "offbeat": true,
+   "safety": "Village road off the Gangotri highway above Bhatwari. Steep last stretch that can ice over. Snow fields are a trek above the village.",
+   "photos": [
+    {
+     "title": "En route to Dayara Bugyal at Gui camp 03.jpg",
+     "author": "Satdeep Gill",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/En_route_to_Dayara_Bugyal_at_Gui_camp_03.jpg/960px-En_route_to_Dayara_Bugyal_at_Gui_camp_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AEn_route_to_Dayara_Bugyal_at_Gui_camp_03.jpg"
+    },
+    {
+     "title": "En route to Dayara Bugyal at Gui camp 01.jpg",
+     "author": "Satdeep Gill",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/En_route_to_Dayara_Bugyal_at_Gui_camp_01.jpg/960px-En_route_to_Dayara_Bugyal_at_Gui_camp_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AEn_route_to_Dayara_Bugyal_at_Gui_camp_01.jpg"
+    },
+    {
+     "title": "En route to Dayara Bugyal at Gui camp 02.jpg",
+     "author": "Satdeep Gill",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/En_route_to_Dayara_Bugyal_at_Gui_camp_02.jpg/960px-En_route_to_Dayara_Bugyal_at_Gui_camp_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AEn_route_to_Dayara_Bugyal_at_Gui_camp_02.jpg"
+    },
+    {
+     "title": "Dayara Bugyal 2.jpg",
+     "author": "Vaibhav78545",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Dayara_Bugyal_2.jpg/960px-Dayara_Bugyal_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ADayara_Bugyal_2.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2132
+  },
+  {
+   "id": "mukteshwar",
+   "name": "Mukteshwar",
+   "area": "Nainital hills",
+   "state": "Uttarakhand",
+   "lat": 29.47208,
+   "lon": 79.64804,
+   "coord_src": "nominatim",
+   "risk": 1,
+   "offbeat": false,
+   "safety": "Snow comes a few times a winter. Narrow hill roads; drive slowly on shaded bends.",
+   "photos": [
+    {
+     "title": "Chauli ki jali.jpg",
+     "author": "Ashish.sadh",
+     "license": "CC BY-SA 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Chauli_ki_jali.jpg/960px-Chauli_ki_jali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChauli_ki_jali.jpg"
+    },
+    {
+     "title": "Mukteshwar Sunset 01.jpg",
+     "author": "ArmouredCyborg",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Mukteshwar_Sunset_01.jpg/960px-Mukteshwar_Sunset_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AMukteshwar_Sunset_01.jpg"
+    },
+    {
+     "title": "Mukteshwar Temple Uttarakhand.jpg",
+     "author": "Vipinvasudeva",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Mukteshwar_Temple_Uttarakhand.jpg/960px-Mukteshwar_Temple_Uttarakhand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AMukteshwar_Temple_Uttarakhand.jpg"
+    },
+    {
+     "title": "Mukteshwar Sunset 03.jpg",
+     "author": "ArmouredCyborg",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Mukteshwar_Sunset_03.jpg/960px-Mukteshwar_Sunset_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AMukteshwar_Sunset_03.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2284
+  },
+  {
+   "id": "gulmarg",
+   "name": "Gulmarg",
+   "area": "Baramulla",
+   "state": "Jammu & Kashmir",
+   "lat": 34.04897,
+   "lon": 74.39212,
+   "coord_src": "nominatim",
+   "risk": 2,
+   "offbeat": false,
+   "safety": "Tangmarg–Gulmarg road is kept open but chains are often mandatory after snow, and police may stop non-local cars. Check J&K traffic advisories.",
+   "photos": [
+    {
+     "title": "Snow Clad Hut in Gulmarg, Jammu & Kashmir.jpg",
+     "author": "Zahoor Bhat",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Snow_Clad_Hut_in_Gulmarg%2C_Jammu_%26_Kashmir.jpg/960px-Snow_Clad_Hut_in_Gulmarg%2C_Jammu_%26_Kashmir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASnow_Clad_Hut_in_Gulmarg%2C_Jammu_%26_Kashmir.jpg"
+    },
+    {
+     "title": "Tourists enjoying snow at Gulmarg, in Jammu and Kashmir.jpg",
+     "author": "Billjones94",
+     "license": "CC BY-SA 4.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/4/47/Tourists_enjoying_snow_at_Gulmarg%2C_in_Jammu_and_Kashmir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3ATourists_enjoying_snow_at_Gulmarg%2C_in_Jammu_and_Kashmir.jpg"
+    },
+    {
+     "title": "Gulmarg Kashmir21102023A.jpg",
+     "author": "Hellohappy",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Gulmarg_Kashmir21102023A.jpg/960px-Gulmarg_Kashmir21102023A.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AGulmarg_Kashmir21102023A.jpg"
+    },
+    {
+     "title": "Gulmarg Kashmir21102023A 2.jpg",
+     "author": "Hellohappy",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Gulmarg_Kashmir21102023A_2.jpg/960px-Gulmarg_Kashmir21102023A_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AGulmarg_Kashmir21102023A_2.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2643
+  },
+  {
+   "id": "sonamarg",
+   "name": "Sonamarg",
+   "area": "Ganderbal",
+   "state": "Jammu & Kashmir",
+   "lat": 34.30239,
+   "lon": 75.29656,
+   "coord_src": "nominatim",
+   "risk": 2,
+   "offbeat": false,
+   "safety": "Srinagar–Sonamarg road (with Z-Morh tunnel) is mostly open, but avalanche-prone stretches close after heavy snow. Do not go beyond Sonamarg towards Zojila in winter.",
+   "photos": [
+    {
+     "title": "Thajiwas Park, Sonamarg, Jammu and Kashmir, India.jpg",
+     "author": "Original:  Ganesh Mohan T\nDerivative work:  UnpetitproleX",
+     "license": "CC BY 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Thajiwas_Park%2C_Sonamarg%2C_Jammu_and_Kashmir%2C_India.jpg/960px-Thajiwas_Park%2C_Sonamarg%2C_Jammu_and_Kashmir%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AThajiwas_Park%2C_Sonamarg%2C_Jammu_and_Kashmir%2C_India.jpg"
+    },
+    {
+     "title": "Sonamarg \"Meadow of Gold\" (14592437483).jpg",
+     "author": "Mike Prince from Bangalore, India",
+     "license": "CC BY 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Sonamarg_%22Meadow_of_Gold%22_%2814592437483%29.jpg/960px-Sonamarg_%22Meadow_of_Gold%22_%2814592437483%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASonamarg_%22Meadow_of_Gold%22_%2814592437483%29.jpg"
+    },
+    {
+     "title": "Sonamarg in Kashmir.jpg",
+     "author": "Akashchaturvedi1",
+     "license": "CC BY-SA 4.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Sonamarg_in_Kashmir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASonamarg_in_Kashmir.jpg"
+    },
+    {
+     "title": "Sonamarg-1.jpg",
+     "author": "Fred Bremner Bremner Lahore c. 1903 Collotype",
+     "license": "CC BY 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Sonamarg-1.jpg/960px-Sonamarg-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASonamarg-1.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2661
+  },
+  {
+   "id": "pahalgam",
+   "name": "Pahalgam",
+   "area": "Anantnag",
+   "state": "Jammu & Kashmir",
+   "lat": 34.0322,
+   "lon": 75.32265,
+   "coord_src": "nominatim",
+   "risk": 1,
+   "offbeat": false,
+   "safety": "Main road from Anantnag stays open. Side valleys (Aru, Chandanwari, Betaab) may close in deep snow.",
+   "photos": [
+    {
+     "title": "Pahalgam Valley.jpg",
+     "author": "KennyOMG",
+     "license": "CC BY-SA 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Pahalgam_Valley.jpg/960px-Pahalgam_Valley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3APahalgam_Valley.jpg"
+    },
+    {
+     "title": "Trek through Kashmir Valley, Pahalgam 3.jpg",
+     "author": "Slyronit",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Trek_through_Kashmir_Valley%2C_Pahalgam_3.jpg/960px-Trek_through_Kashmir_Valley%2C_Pahalgam_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ATrek_through_Kashmir_Valley%2C_Pahalgam_3.jpg"
+    },
+    {
+     "title": "Pahalgam meadow.jpg",
+     "author": "Tipofan",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Pahalgam_meadow.jpg/960px-Pahalgam_meadow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3APahalgam_meadow.jpg"
+    },
+    {
+     "title": "Trek through Kashmir Valley, Pahalgam 2.jpg",
+     "author": "Slyronit",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Trek_through_Kashmir_Valley%2C_Pahalgam_2.jpg/960px-Trek_through_Kashmir_Valley%2C_Pahalgam_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ATrek_through_Kashmir_Valley%2C_Pahalgam_2.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2182
+  },
+  {
+   "id": "doodhpathri",
+   "name": "Doodhpathri",
+   "area": "Budgam",
+   "state": "Jammu & Kashmir",
+   "lat": 33.86142,
+   "lon": 74.56717,
+   "coord_src": "nominatim",
+   "risk": 2,
+   "offbeat": true,
+   "safety": "Meadow road from Khansahib can close in heavy snow. Limited facilities; go as a day trip from Srinagar.",
+   "photos": [
+    {
+     "title": "A bench with scenic view Doodhpathri southwest Jammu Kashmir India.jpg",
+     "author": "Ankur P from Pune, India",
+     "license": "CC BY-SA 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/A_bench_with_scenic_view_Doodhpathri_southwest_Jammu_Kashmir_India.jpg/960px-A_bench_with_scenic_view_Doodhpathri_southwest_Jammu_Kashmir_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AA_bench_with_scenic_view_Doodhpathri_southwest_Jammu_Kashmir_India.jpg"
+    },
+    {
+     "title": "Doude pather waters.jpg",
+     "author": "MDG27Q",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Doude_pather_waters.jpg/960px-Doude_pather_waters.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ADoude_pather_waters.jpg"
+    },
+    {
+     "title": "Doude pather upper view.jpg",
+     "author": "MDG27Q",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Doude_pather_upper_view.jpg/960px-Doude_pather_upper_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ADoude_pather_upper_view.jpg"
+    },
+    {
+     "title": "Doude pather forests.jpg",
+     "author": "MDG27Q",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Doude_pather_forests.jpg/960px-Doude_pather_forests.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ADoude_pather_forests.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2673
+  },
+  {
+   "id": "yusmarg",
+   "name": "Yusmarg",
+   "area": "Budgam",
+   "state": "Jammu & Kashmir",
+   "lat": 33.82139,
+   "lon": 74.66766,
+   "coord_src": "nominatim",
+   "risk": 2,
+   "offbeat": true,
+   "safety": "Quiet meadow with a single road that may be restricted after snowfall. Limited stays.",
+   "photos": [
+    {
+     "title": "Nilnag Lake.jpg",
+     "author": "Suhail Skindar Sofi",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Nilnag_Lake.jpg/960px-Nilnag_Lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ANilnag_Lake.jpg"
+    },
+    {
+     "title": "Yousmarg.jpg",
+     "author": "Suhail Skindar Sofi",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Yousmarg.jpg/960px-Yousmarg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AYousmarg.jpg"
+    },
+    {
+     "title": "Yusmarg, beautiful valley in Kashmir.jpg",
+     "author": "Debashritaiitmandi",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Yusmarg%2C_beautiful_valley_in_Kashmir.jpg/960px-Yusmarg%2C_beautiful_valley_in_Kashmir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AYusmarg%2C_beautiful_valley_in_Kashmir.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2388
+  },
+  {
+   "id": "patnitop",
+   "name": "Patnitop",
+   "area": "Udhampur",
+   "state": "Jammu & Kashmir",
+   "lat": 33.0881,
+   "lon": 75.28678,
+   "coord_src": "nominatim",
+   "risk": 1,
+   "offbeat": false,
+   "safety": "Old NH44 road up from Kud/Batote. Chenani–Nashri tunnel bypasses it, so take the old road. Gets icy and busy after snow.",
+   "photos": [
+    {
+     "title": "Patnitop hill.jpg",
+     "author": "Saroj Kumar from Bangalore, India",
+     "license": "CC BY 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Patnitop_hill.jpg/960px-Patnitop_hill.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3APatnitop_hill.jpg"
+    },
+    {
+     "title": "Patnitop.jpg",
+     "author": "Billyakhtar",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Patnitop.jpg/960px-Patnitop.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3APatnitop.jpg"
+    },
+    {
+     "title": "Patnitop Park.jpg",
+     "author": "My Lord",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Patnitop_Park.jpg/960px-Patnitop_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3APatnitop_Park.jpg"
+    },
+    {
+     "title": "Patni top (38).JPG",
+     "author": "Guptaele",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Patni_top_%2838%29.JPG/960px-Patni_top_%2838%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3APatni_top_%2838%29.JPG"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2172
+  },
+  {
+   "id": "nathatop",
+   "name": "Natha Top",
+   "area": "above Patnitop",
+   "state": "Jammu & Kashmir",
+   "lat": 33.09212,
+   "lon": 75.27689,
+   "coord_src": "nominatim",
+   "risk": 2,
+   "offbeat": true,
+   "safety": "A few km above Patnitop. Often closed or chains-only right after snow; walk if the road is not cleared.",
+   "photos": [
+    {
+     "title": "Natha Top, Jammu and Kashmir.jpg",
+     "author": "Its sumit sharma",
+     "license": "CC BY-SA 4.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/2/20/Natha_Top%2C_Jammu_and_Kashmir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3ANatha_Top%2C_Jammu_and_Kashmir.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2473
+  },
+  {
+   "id": "gurez",
+   "name": "Gurez",
+   "area": "Bandipora",
+   "state": "Jammu & Kashmir",
+   "lat": 34.633,
+   "lon": 74.833,
+   "coord_src": "seed",
+   "risk": 3,
+   "offbeat": true,
+   "safety": "Razdan Pass usually closes for winter after heavy snow (often Dec–Apr). Close to the LoC; registration may be needed. Check before planning.",
+   "photos": [
+    {
+     "title": "Gurez Valley 04.jpg",
+     "author": "Journo Mohsin",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Gurez_Valley_04.jpg/960px-Gurez_Valley_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AGurez_Valley_04.jpg"
+    },
+    {
+     "title": "Gurez Valley 03.jpg",
+     "author": "Journo Mohsin",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Gurez_Valley_03.jpg/960px-Gurez_Valley_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AGurez_Valley_03.jpg"
+    },
+    {
+     "title": "Gurez Valley 10.jpg",
+     "author": "Journo Mohsin",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Gurez_Valley_10.jpg/960px-Gurez_Valley_10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AGurez_Valley_10.jpg"
+    },
+    {
+     "title": "Gurez Valley 02.jpg",
+     "author": "Journo Mohsin",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Gurez_Valley_02.jpg/960px-Gurez_Valley_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AGurez_Valley_02.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2415
+  },
+  {
+   "id": "lachung",
+   "name": "Lachung",
+   "area": "North Sikkim",
+   "state": "Sikkim",
+   "lat": 27.68971,
+   "lon": 88.74259,
+   "coord_src": "nominatim",
+   "risk": 3,
+   "offbeat": false,
+   "safety": "North Sikkim needs a Protected Area Permit arranged through a registered operator, and outside self-drive cars are usually not allowed beyond Gangtok — you hire a local permit taxi. Landslides are common.",
+   "photos": [
+    {
+     "title": "Lachung river, lachung, sikkim, India.jpg",
+     "author": "The original uploader was Jaiprakashsingh at English Wikipedia.",
+     "license": "CC BY-SA 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Lachung_river%2C_lachung%2C_sikkim%2C_India.jpg/960px-Lachung_river%2C_lachung%2C_sikkim%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ALachung_river%2C_lachung%2C_sikkim%2C_India.jpg"
+    },
+    {
+     "title": "Yumthang valley, Lachung Sikkim India 2012.jpg",
+     "author": "Joginder Pathak",
+     "license": "CC BY-SA 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Yumthang_valley%2C_Lachung_Sikkim_India_2012.jpg/960px-Yumthang_valley%2C_Lachung_Sikkim_India_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AYumthang_valley%2C_Lachung_Sikkim_India_2012.jpg"
+    },
+    {
+     "title": "Bridge over Lachung River, North Sikkim.jpg",
+     "author": "Sujay25",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Bridge_over_Lachung_River%2C_North_Sikkim.jpg/960px-Bridge_over_Lachung_River%2C_North_Sikkim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ABridge_over_Lachung_River%2C_North_Sikkim.jpg"
+    },
+    {
+     "title": "View of lachung river from lachung.jpg",
+     "author": "Arindam Bose",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/View_of_lachung_river_from_lachung.jpg/960px-View_of_lachung_river_from_lachung.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AView_of_lachung_river_from_lachung.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2638
+  },
+  {
+   "id": "yumthang",
+   "name": "Yumthang Valley",
+   "area": "North Sikkim",
+   "state": "Sikkim",
+   "lat": 27.826,
+   "lon": 88.696,
+   "coord_src": "seed",
+   "risk": 3,
+   "offbeat": false,
+   "safety": "Day trip from Lachung by local permit taxi. Road may close after heavy snow. Permit rules as for Lachung.",
+   "photos": [
+    {
+     "title": "Yumthang valley, Lachung Sikkim India 2012.jpg",
+     "author": "Joginder Pathak",
+     "license": "CC BY-SA 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Yumthang_valley%2C_Lachung_Sikkim_India_2012.jpg/960px-Yumthang_valley%2C_Lachung_Sikkim_India_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AYumthang_valley%2C_Lachung_Sikkim_India_2012.jpg"
+    },
+    {
+     "title": "Bridge over the river in Yumthang Valley, North Sikkim, India.jpg",
+     "author": "Mananjpatel1996",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Bridge_over_the_river_in_Yumthang_Valley%2C_North_Sikkim%2C_India.jpg/960px-Bridge_over_the_river_in_Yumthang_Valley%2C_North_Sikkim%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ABridge_over_the_river_in_Yumthang_Valley%2C_North_Sikkim%2C_India.jpg"
+    },
+    {
+     "title": "Trees at yumthang valley (6828773293).jpg",
+     "author": "soumyajit pramanick",
+     "license": "CC BY-SA 2.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Trees_at_yumthang_valley_%286828773293%29.jpg/960px-Trees_at_yumthang_valley_%286828773293%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ATrees_at_yumthang_valley_%286828773293%29.jpg"
+    },
+    {
+     "title": "Landscape on the way to Yumthang Valley from Lachung, North Sikkim, India 04.jpg",
+     "author": "Amitabha Gupta",
+     "license": "CC BY 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Landscape_on_the_way_to_Yumthang_Valley_from_Lachung%2C_North_Sikkim%2C_India_04.jpg/960px-Landscape_on_the_way_to_Yumthang_Valley_from_Lachung%2C_North_Sikkim%2C_India_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ALandscape_on_the_way_to_Yumthang_Valley_from_Lachung%2C_North_Sikkim%2C_India_04.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 3697
+  },
+  {
+   "id": "zeropoint",
+   "name": "Zero Point (Yumesamdong)",
+   "area": "North Sikkim",
+   "state": "Sikkim",
+   "lat": 27.91274,
+   "lon": 88.71247,
+   "coord_src": "nominatim",
+   "risk": 3,
+   "offbeat": false,
+   "safety": "Very high (about 4,700 m). Altitude sickness risk; go only by local permit taxi, limit time at the top. Often closed after fresh snow.",
+   "photos": [
+    {
+     "title": "Zero Point, Yumesamdong, North Sikkim 01.jpg",
+     "author": "Sujay25",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Zero_Point%2C_Yumesamdong%2C_North_Sikkim_01.jpg/960px-Zero_Point%2C_Yumesamdong%2C_North_Sikkim_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AZero_Point%2C_Yumesamdong%2C_North_Sikkim_01.jpg"
+    },
+    {
+     "title": "Zero Point, Yumesamdong, North Sikkim.jpg",
+     "author": "Sujay25",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Zero_Point%2C_Yumesamdong%2C_North_Sikkim.jpg/960px-Zero_Point%2C_Yumesamdong%2C_North_Sikkim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AZero_Point%2C_Yumesamdong%2C_North_Sikkim.jpg"
+    },
+    {
+     "title": "Zero Point Sikkim - North Sikkim.jpg",
+     "author": "Indrajit Das",
+     "license": "CC BY 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Zero_Point_Sikkim_-_North_Sikkim.jpg/960px-Zero_Point_Sikkim_-_North_Sikkim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AZero_Point_Sikkim_-_North_Sikkim.jpg"
+    },
+    {
+     "title": "Yumesamdong-Zero Point.jpg",
+     "author": "Sandeep pai1986",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Yumesamdong-Zero_Point.jpg/960px-Yumesamdong-Zero_Point.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AYumesamdong-Zero_Point.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 4681
+  },
+  {
+   "id": "lachen",
+   "name": "Lachen",
+   "area": "North Sikkim",
+   "state": "Sikkim",
+   "lat": 27.73061,
+   "lon": 88.5495,
+   "coord_src": "nominatim",
+   "risk": 3,
+   "offbeat": true,
+   "safety": "Same permit rules as Lachung. Base for Gurudongmar Lake. Roads are landslide-prone; follow operator and army advice.",
+   "photos": [
+    {
+     "title": "Lachen Monastery Gompa.jpg",
+     "author": "Prof Ranga Sai",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Lachen_Monastery_Gompa.jpg/960px-Lachen_Monastery_Gompa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ALachen_Monastery_Gompa.jpg"
+    },
+    {
+     "title": "Lachen Sikkim.jpg",
+     "author": "Tushar2486",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Lachen_Sikkim.jpg/960px-Lachen_Sikkim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ALachen_Sikkim.jpg"
+    },
+    {
+     "title": "Kangchenjunga View Point, Lachen, Sikkim.jpg",
+     "author": "Prabhat114",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Kangchenjunga_View_Point%2C_Lachen%2C_Sikkim.jpg/960px-Kangchenjunga_View_Point%2C_Lachen%2C_Sikkim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKangchenjunga_View_Point%2C_Lachen%2C_Sikkim.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2705
+  },
+  {
+   "id": "tsomgo",
+   "name": "Tsomgo (Changu) Lake",
+   "area": "East Sikkim",
+   "state": "Sikkim",
+   "lat": 27.37453,
+   "lon": 88.76198,
+   "coord_src": "nominatim",
+   "risk": 2,
+   "offbeat": false,
+   "safety": "Permit needed (arranged via registered operators from Gangtok). Road can close after snowfall. Nathu La beyond has extra permit rules for Indian nationals only.",
+   "photos": [
+    {
+     "title": "Changu (Tsomgo) Lake.jpg",
+     "author": "Kuldeepburjbhalaike",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Changu_%28Tsomgo%29_Lake.jpg/960px-Changu_%28Tsomgo%29_Lake.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChangu_%28Tsomgo%29_Lake.jpg"
+    },
+    {
+     "title": "Tsongmo Lake or Changu Lake - East Sikkim.jpg",
+     "author": "Indrajit Das",
+     "license": "CC BY 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Tsongmo_Lake_or_Changu_Lake_-_East_Sikkim.jpg/960px-Tsongmo_Lake_or_Changu_Lake_-_East_Sikkim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ATsongmo_Lake_or_Changu_Lake_-_East_Sikkim.jpg"
+    },
+    {
+     "title": "Changu Lake,Sikkim.jpg",
+     "author": "পাপৰি বৰা",
+     "license": "CC BY-SA 4.0",
+     "src": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Changu_Lake%2CSikkim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "page": "https://commons.wikimedia.org/wiki/File%3AChangu_Lake%2CSikkim.jpg"
+    },
+    {
+     "title": "Tsomgo Lake in October month.jpg",
+     "author": "Vijayanand7",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Tsomgo_Lake_in_October_month.jpg/960px-Tsomgo_Lake_in_October_month.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ATsomgo_Lake_in_October_month.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 3751
+  },
+  {
+   "id": "zuluk",
+   "name": "Zuluk",
+   "area": "Old Silk Route",
+   "state": "Sikkim",
+   "lat": 27.252,
+   "lon": 88.777,
+   "coord_src": "seed",
+   "risk": 3,
+   "offbeat": true,
+   "safety": "Old Silk Route with famous zig-zag bends. Permit from Rongli needed. Very icy above Zuluk (Thambi view point, Nathang) in winter.",
+   "photos": [
+    {
+     "title": "Sikkim Zuluk , Old Silk Route.jpg",
+     "author": "Goswamitutun",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Sikkim_Zuluk_%2C_Old_Silk_Route.jpg/960px-Sikkim_Zuluk_%2C_Old_Silk_Route.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3ASikkim_Zuluk_%2C_Old_Silk_Route.jpg"
+    },
+    {
+     "title": "Yak Zuluk Sikkim.jpg",
+     "author": "Srudchandran",
+     "license": "CC0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Yak_Zuluk_Sikkim.jpg/960px-Yak_Zuluk_Sikkim.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AYak_Zuluk_Sikkim.jpg"
+    },
+    {
+     "title": "Kupup,Zuluk,Sikkim - panoramio.jpg",
+     "author": "atanudawn",
+     "license": "CC BY 3.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Kupup%2CZuluk%2CSikkim_-_panoramio.jpg/960px-Kupup%2CZuluk%2CSikkim_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKupup%2CZuluk%2CSikkim_-_panoramio.jpg"
+    },
+    {
+     "title": "Kanchenjunga from Zuluk, Sikkim (cropped).jpg",
+     "author": "Madhumita Das",
+     "license": "CC BY-SA 4.0",
+     "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Kanchenjunga_from_Zuluk%2C_Sikkim_%28cropped%29.jpg/960px-Kanchenjunga_from_Zuluk%2C_Sikkim_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "page": "https://commons.wikimedia.org/wiki/File%3AKanchenjunga_from_Zuluk%2C_Sikkim_%28cropped%29.jpg"
+    }
+   ],
+   "snow_months": "",
+   "elevation_m": 2723
+  }
+ ]
+}
