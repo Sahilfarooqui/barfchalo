@@ -26,3 +26,11 @@ python3 -m http.server 8080   # then open http://localhost:8080
 
 ## Limits
 Public OSRM demo server, Photon and Nominatim are free community services with fair-use rate limits — fine for early traffic, but for scale move to a self-hosted or paid router (e.g. OpenRouteService key, GraphHopper) and a commercial tile provider.
+
+## Freshness
+- Snow, weather, snow depth and current temperature: fetched live from Open-Meteo on every page load, auto-refreshed every 30 min (and when the tab comes back after 15+ min). The "Updated" time is shown above the results.
+- Routes, distances and elevation profiles: live from OSRM / Open-Meteo per request.
+- Fuel prices: `data/fuel.json`, state averages scraped from goodreturns.in by `scripts/update_fuel.py`. Daily refresh workflow is in `ops/refresh-data.yml`; move it to `.github/workflows/` to activate (needs a token with the `workflow` scope or the GitHub web editor). Falls back to approx values in `data/cars.json` for missing states.
+
+## Reach
+Privacy-friendly counters via the free Abacus API (no cookies/personal data). Dashboard: https://sahilfarooqui.github.io/barfchalo/stats.html. Counting is disabled on localhost, in automated browsers, and with `?nocount`.
