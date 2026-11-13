@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T15:58+05:30",
+ "updated": "2026-11-13T12:28+05:30",
  "source": "GoodReturns state-average retail prices (goodreturns.in)",
  "source_url": "https://www.goodreturns.in/petrol-price.html",
  "note": "State averages; your city's pump price can differ by a few rupees.",
@@ -85,8 +85,8 @@
    "diesel": 97.83
   },
   "Manipur": {
-   "petrol": 106.9,
-   "diesel": 92.59
+   "petrol": 107.32,
+   "diesel": 92.97
   },
   "Meghalaya": {
    "petrol": 102.64,
