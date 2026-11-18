@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T21:49+05:30",
+ "updated": "2026-11-18T13:14+05:30",
  "source": "GoodReturns state-average retail prices (goodreturns.in)",
  "source_url": "https://www.goodreturns.in/petrol-price.html",
  "note": "State averages; your city's pump price can differ by a few rupees.",
@@ -29,20 +29,20 @@
    "diesel": 101.32
   },
   "Dadra & Nagar Haveli & Daman & Diu": {
-   "petrol": 99.44,
-   "diesel": 95.33
+   "petrol": 99.5,
+   "diesel": 95.4
   },
   "Delhi": {
    "petrol": 102.12,
    "diesel": 95.2
   },
   "Goa": {
-   "petrol": 104.0,
-   "diesel": 95.88
+   "petrol": 103.92,
+   "diesel": 95.81
   },
   "Gujarat": {
-   "petrol": 102.04,
-   "diesel": 98.15
+   "petrol": 102.01,
+   "diesel": 98.13
   },
   "Haryana": {
    "petrol": 103.35,
@@ -50,7 +50,7 @@
   },
   "Himachal Pradesh": {
    "petrol": 103.15,
-   "diesel": 95.28
+   "diesel": 95.13
   },
   "Jammu & Kashmir": {
    "petrol": 104.13,
@@ -61,24 +61,24 @@
    "diesel": 101.31
   },
   "Karnataka": {
-   "petrol": 111.68,
-   "diesel": 99.56
+   "petrol": 110.44,
+   "diesel": 98.39
   },
   "Kerala": {
    "petrol": 115.49,
    "diesel": 104.4
   },
   "Ladakh": {
-   "petrol": 110.01,
-   "diesel": 94.73
+   "petrol": 109.78,
+   "diesel": 94.51
   },
   "Lakshadweep": {
    "petrol": 107.5,
    "diesel": 102.8
   },
   "Madhya Pradesh": {
-   "petrol": 114.36,
-   "diesel": 99.48
+   "petrol": 114.45,
+   "diesel": 99.55
   },
   "Maharashtra": {
    "petrol": 111.21,
@@ -113,8 +113,8 @@
    "diesel": 95.47
   },
   "Rajasthan": {
-   "petrol": 113.19,
-   "diesel": 98.25
+   "petrol": 112.69,
+   "diesel": 97.78
   },
   "Sikkim": {
    "petrol": 110.8,
@@ -125,16 +125,16 @@
    "diesel": 99.55
   },
   "Telangana": {
-   "petrol": 116.15,
-   "diesel": 104.23
+   "petrol": 115.71,
+   "diesel": 103.84
   },
   "Tripura": {
    "petrol": 104.96,
    "diesel": 93.85
   },
   "Uttar Pradesh": {
-   "petrol": 101.89,
-   "diesel": 95.36
+   "petrol": 102.23,
+   "diesel": 95.71
   },
   "Uttarakhand": {
    "petrol": 99.54,
