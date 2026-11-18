@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T13:14+05:30",
+ "updated": "2026-11-18T21:22+05:30",
  "source": "GoodReturns state-average retail prices (goodreturns.in)",
  "source_url": "https://www.goodreturns.in/petrol-price.html",
  "note": "State averages; your city's pump price can differ by a few rupees.",
@@ -13,8 +13,8 @@
    "diesel": 87.32
   },
   "Assam": {
-   "petrol": 105.73,
-   "diesel": 97.23
+   "petrol": 106.65,
+   "diesel": 98.07
   },
   "Bihar": {
    "petrol": 113.37,
@@ -25,8 +25,8 @@
    "diesel": 89.47
   },
   "Chhattisgarh": {
-   "petrol": 108.06,
-   "diesel": 101.32
+   "petrol": 109.73,
+   "diesel": 103.0
   },
   "Dadra & Nagar Haveli & Daman & Diu": {
    "petrol": 99.5,
@@ -93,8 +93,8 @@
    "diesel": 94.13
   },
   "Mizoram": {
-   "petrol": 106.54,
-   "diesel": 95.16
+   "petrol": 106.96,
+   "diesel": 95.79
   },
   "Nagaland": {
    "petrol": 104.9,
