@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T21:09+05:30",
+ "updated": "2026-11-21T12:57+05:30",
  "source": "GoodReturns state-average retail prices (goodreturns.in)",
  "source_url": "https://www.goodreturns.in/petrol-price.html",
  "note": "State averages; your city's pump price can differ by a few rupees.",
@@ -17,11 +17,11 @@
    "diesel": 87.32
   },
   "Assam": {
-   "petrol": 106.65,
-   "diesel": 98.07
+   "petrol": 105.73,
+   "diesel": 97.23
   },
   "Bihar": {
-   "petrol": 113.37,
+   "petrol": 113.35,
    "diesel": 99.36
   },
   "Chandigarh": {
@@ -29,24 +29,24 @@
    "diesel": 89.47
   },
   "Chhattisgarh": {
-   "petrol": 109.73,
-   "diesel": 103.0
+   "petrol": 108.06,
+   "diesel": 101.32
   },
   "Dadra & Nagar Haveli & Daman & Diu": {
-   "petrol": 99.5,
-   "diesel": 95.4
+   "petrol": 99.44,
+   "diesel": 95.33
   },
   "Delhi": {
    "petrol": 102.12,
    "diesel": 95.2
   },
   "Goa": {
-   "petrol": 103.92,
-   "diesel": 95.81
+   "petrol": 104.0,
+   "diesel": 95.88
   },
   "Gujarat": {
-   "petrol": 102.01,
-   "diesel": 98.13
+   "petrol": 102.04,
+   "diesel": 98.15
   },
   "Haryana": {
    "petrol": 103.35,
@@ -54,7 +54,7 @@
   },
   "Himachal Pradesh": {
    "petrol": 103.15,
-   "diesel": 95.13
+   "diesel": 95.28
   },
   "Jammu & Kashmir": {
    "petrol": 104.13,
@@ -65,24 +65,24 @@
    "diesel": 101.31
   },
   "Karnataka": {
-   "petrol": 110.44,
-   "diesel": 98.39
+   "petrol": 111.68,
+   "diesel": 99.56
   },
   "Kerala": {
    "petrol": 115.49,
    "diesel": 104.4
   },
   "Ladakh": {
-   "petrol": 109.78,
-   "diesel": 94.51
+   "petrol": 110.01,
+   "diesel": 94.73
   },
   "Lakshadweep": {
    "petrol": 107.5,
    "diesel": 102.8
   },
   "Madhya Pradesh": {
-   "petrol": 114.45,
-   "diesel": 99.55
+   "petrol": 114.36,
+   "diesel": 99.48
   },
   "Maharashtra": {
    "petrol": 111.21,
@@ -97,8 +97,8 @@
    "diesel": 94.13
   },
   "Mizoram": {
-   "petrol": 106.96,
-   "diesel": 95.79
+   "petrol": 106.54,
+   "diesel": 95.16
   },
   "Nagaland": {
    "petrol": 104.9,
@@ -117,8 +117,8 @@
    "diesel": 95.47
   },
   "Rajasthan": {
-   "petrol": 112.69,
-   "diesel": 97.78
+   "petrol": 113.19,
+   "diesel": 98.25
   },
   "Sikkim": {
    "petrol": 110.8,
@@ -129,8 +129,8 @@
    "diesel": 99.55
   },
   "Telangana": {
-   "petrol": 115.71,
-   "diesel": 103.84
+   "petrol": 116.15,
+   "diesel": 104.23
   },
   "Tripura": {
    "petrol": 104.96,
