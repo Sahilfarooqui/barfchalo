@@ -20,7 +20,11 @@ const Stats = (() => {
   let tripsOpened = new Set();
   return {
     pageview() { hit("pageviews"); hit("pv-" + day());
-      once("bc_seen", () => hit("visitors")); once("bc_seen_" + day(), () => hit("uv-" + day())); },
+      once("bc_seen", () => hit("visitors")); once("bc_seen_" + day(), () => hit("uv-" + day()));
+      const q = new URLSearchParams(location.search);
+      const src = (q.get("src") || "").toLowerCase();
+      const utm = (q.get("utm_source") || "").toLowerCase();
+      if (src === "ig" || utm === "instagram") { hit("ref-ig"); hit("ref-ig-" + day()); } },
     trip() { const k = location.hash; if (tripsOpened.has(k)) return; tripsOpened.add(k);
       hit("trips").then(r => r && r.value != null && setTrips(r.value)); hit("trips-" + day()); },
     event(k) { hit(k); hit(k + "-" + day()); },

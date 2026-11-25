@@ -19,7 +19,7 @@ table{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}td,th{pa
 <div class="g" id="tot"></div>
 <div class="box"><b>Last 14 days</b> <span class="m">(IST days)</span><table id="days"><tr><th>Day</th><th>Page views</th><th>Unique visitors</th><th>Trips opened</th><th>WhatsApp shares</th></tr></table></div>
 <div class="box m"><b style="color:#eef5ff">How to read this</b><br>
-<b>Page views</b> = every time the site is opened. <b>Unique visitors</b> = browsers counted once ever (and once per day in the daily table). <b>Trips opened</b> = someone opened a destination's route &amp; cost. <b>WhatsApp / link shares</b> = taps on the share buttons.
+<b>Page views</b> = every time the site is opened. <b>Unique visitors</b> = browsers counted once ever (and once per day in the daily table). <b>Trips opened</b> = someone opened a destination's route &amp; cost. <b>WhatsApp / link shares</b> = taps on the share buttons. <b>From Instagram link</b> = visits that arrived with <code>?src=ig</code> or <code>utm_source=instagram</code> (the Instagram bio link).
 Visitors who clear browser storage or switch devices are counted again, and ad-blockers may block counting, so treat these as close estimates.</div>
 </div>
 <script>
@@ -28,7 +28,7 @@ async function get(k){try{const r=await fetch(`${API}/get/${NS}/${k}`);const j=a
 const fmt=n=>Number(n).toLocaleString("en-IN");
 (async()=>{
  document.getElementById("at").textContent=new Date().toLocaleString("en-IN",{timeZone:"Asia/Kolkata",dateStyle:"medium",timeStyle:"short"})+" IST";
- const T=[["pageviews","👀 Page views"],["visitors","🧑 Unique visitors"],["trips","🧭 Trips opened"],["whatsapp","🟢 WhatsApp shares"],["shares","🔗 Link shares"]];
+ const T=[["pageviews","👀 Page views"],["visitors","🧑 Unique visitors"],["trips","🧭 Trips opened"],["whatsapp","🟢 WhatsApp shares"],["shares","🔗 Link shares"],["ref-ig","📸 From Instagram link"]];
  const tot=document.getElementById("tot");
  for(const [k,l] of T){const v=await get(k);tot.insertAdjacentHTML("beforeend",`<div class="c"><b>${fmt(v)}</b><span>${l}</span></div>`);await sleep(150)}
  const tb=document.getElementById("days");
