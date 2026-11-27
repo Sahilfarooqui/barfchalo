@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T22:40+05:30",
+ "updated": "2026-11-27T14:20+05:30",
  "source": "GoodReturns state-average retail prices (goodreturns.in)",
  "source_url": "https://www.goodreturns.in/petrol-price.html",
  "note": "State averages; your city's pump price can differ by a few rupees.",
@@ -9,8 +9,8 @@
    "diesel": 84.56
   },
   "Arunachal Pradesh": {
-   "petrol": 97.96,
-   "diesel": 87.32
+   "petrol": 97.7,
+   "diesel": 87.11
   },
   "Assam": {
    "petrol": 105.73,
@@ -25,12 +25,12 @@
    "diesel": 89.47
   },
   "Chhattisgarh": {
-   "petrol": 108.06,
-   "diesel": 101.32
+   "petrol": 109.73,
+   "diesel": 103.0
   },
   "Dadra & Nagar Haveli & Daman & Diu": {
-   "petrol": 99.44,
-   "diesel": 95.33
+   "petrol": 99.5,
+   "diesel": 95.4
   },
   "Delhi": {
    "petrol": 102.12,
@@ -49,8 +49,8 @@
    "diesel": 96.01
   },
   "Himachal Pradesh": {
-   "petrol": 103.15,
-   "diesel": 95.28
+   "petrol": 103.14,
+   "diesel": 95.27
   },
   "Jammu & Kashmir": {
    "petrol": 104.13,
@@ -66,7 +66,7 @@
   },
   "Kerala": {
    "petrol": 115.49,
-   "diesel": 104.4
+   "diesel": 104.41
   },
   "Ladakh": {
    "petrol": 110.01,
@@ -77,8 +77,8 @@
    "diesel": 102.8
   },
   "Madhya Pradesh": {
-   "petrol": 114.36,
-   "diesel": 99.48
+   "petrol": 114.57,
+   "diesel": 99.64
   },
   "Maharashtra": {
    "petrol": 111.21,
