@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T22:22+05:30",
+ "updated": "2026-11-28T13:39+05:30",
  "source": "GoodReturns state-average retail prices (goodreturns.in)",
  "source_url": "https://www.goodreturns.in/petrol-price.html",
  "note": "State averages; your city's pump price can differ by a few rupees.",
@@ -7,6 +7,10 @@
   "Andaman & Nicobar": {
    "petrol": 88.66,
    "diesel": 84.56
+  },
+  "Andhra Pradesh": {
+   "petrol": 117.51,
+   "diesel": 105.2
   },
   "Arunachal Pradesh": {
    "petrol": 97.7,
